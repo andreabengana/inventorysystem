@@ -7,3 +7,14 @@ font-family: 'Numans', sans-serif;
 color: white!important;
 }
 
+label{
+	color: black;
+}
+
+.form-row{
+	margin-top: 20px;
+}
+
+.container{
+	margin-top: 60px;
+}
