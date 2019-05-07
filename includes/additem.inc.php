@@ -4,7 +4,7 @@ if(isset($_POST['additembtn'])){
 	require 'db.inc.php';
 
 	$code = "AGBI";
-	$companyname = $_POST['companyname'];
+	$companyname = mysqlit  $_POST['companyname'];
 	$brand = $_POST['productbrand'];
 	$code1 = $_POST['code1'];
 	$code2 = $_POST['code2'];
@@ -20,7 +20,10 @@ elseif($code1 !== $code2){
 	header("Location: ../additem.php?error=productcode");
 }
 else{
-			$sql = "INSERT INTO tblproducts (productID, productCompanyCode, productBrand, productModel, productDesc, productStocks) VALUES (?, ?, ?, ?, ?, ?)";
+			$sql = "INSERT INTO tblproducts (productID, productCompanyCode, productBrand, productModel, productDesc, productStocks) VALUES ($code, $companyname, $brand, $code1, $producttype, $stocks)";
+			
+			mysqli_query($conn, $sql);
+			/* Prepared Statements
 			$stmt = mysqli_stmt_init($conn);
 
 			if(!mysqli_stmt_prepare($stmt, $sql)){
@@ -32,7 +35,7 @@ else{
 				mysqli_stmt_execute($stmt);
 				header("Location: ../additem.php?itemadded");
 				exit();
-			}
+			}*/
 		}
 	}	
 else{
