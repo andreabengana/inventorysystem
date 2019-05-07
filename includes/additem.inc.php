@@ -3,8 +3,8 @@
 if(isset($_POST['additembtn'])){
 	require 'db.inc.php';
 
-	$code = "AGBI";
-	$companyname = mysqlit  $_POST['companyname'];
+	
+	$companyname = $_POST['companyname'];
 	$brand = $_POST['productbrand'];
 	$code1 = $_POST['code1'];
 	$code2 = $_POST['code2'];
@@ -23,6 +23,7 @@ else{
 			$sql = "INSERT INTO tblproducts (productID, productCompanyCode, productBrand, productModel, productDesc, productStocks) VALUES ($code, $companyname, $brand, $code1, $producttype, $stocks)";
 			
 			mysqli_query($conn, $sql);
+			header("Location: ../additem.php?itemadded");
 			/* Prepared Statements
 			$stmt = mysqli_stmt_init($conn);
 
@@ -41,7 +42,6 @@ else{
 else{
 	header("Location: login.php");
 }
-mysqli_stmt_close($stmt);
 mysqli_close($conn);
 
 
