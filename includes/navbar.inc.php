@@ -29,7 +29,7 @@
 		<span class="navbar-text">Inventory System</span>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link" href="#"><i class="fa fa-home"></i> Home </a>
+				<a class="nav-link active" href="homepage.php"><i class="fa fa-home"></i> Home </a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="#"><i class="fa fa-plus"></i> Add Staff </a>
