@@ -19,8 +19,8 @@ else{
 							<label for="row1"><h3> Item Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
     							<div class="form-group col-md-6">
-      								<label for="inputfirstname">Company</label>
-      								<input type="text" class="form-control" placeholder="Anderson Group BPO Inc." name="companyname">
+      								<label for="inputfirstname">Supplier</label>
+      								<input type="text" class="form-control" placeholder="Anderson Group BPO Inc." name="suppliername">
     							</div>
     							<div class="form-group col-md-6">
      								 <label for="inputlastname">Brand</label>
