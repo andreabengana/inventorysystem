@@ -17,6 +17,7 @@
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" type="text/css" href="design/navbardesign.css">
+	<link rel="stylesheet" type="text/css" href="design/sidebardesign.css">
 </head>
 	<nav class="navbar navbar-expand-md navbar-dark bg-primary sticky-top">
 
