@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title> Home </title>
+	<title> Assets | ANDERSON </title>
+	<link rel="icon" type="image/png" href="../resources/agbilogo.png">
 	<!-- Boostrap Jquery -->
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 
@@ -29,10 +30,10 @@
 		<span class="navbar-text">Inventory System</span>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
-				<a class="nav-link active" href="homepage.php"><i class="fa fa-home"></i> Home </a>
+				<a class="nav-link" href="homepage.php"><i class="fa fa-home"></i> Home </a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="#"><i class="fa fa-plus"></i> Add Staff </a>
+				<a class="nav-link" href="addstaff.php"><i class="fa fa-plus"></i> Add Staff </a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Item </a>
