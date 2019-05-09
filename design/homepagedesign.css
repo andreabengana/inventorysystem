@@ -8,3 +8,6 @@ font-family: 'Numans', sans-serif;
 .card{
 	border: none!important;
 }
+.container{
+	width: 100%;
+}

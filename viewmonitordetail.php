@@ -10,7 +10,7 @@ else{
 }
 
 ?>
-<body>
+<body>t
 	 <div class="container" style="margin-top: 50px;">
         <div class="table-responsive">  
             <table id="employee_data" class="table table-striped table-bordered">  
@@ -21,7 +21,7 @@ else{
                         <td>Brand</td>  
                         <td>Model</td>  
                         <td>Description</td>  
-                        <td>Stock Count</td>  
+                        <td>Product Count</td>  
                     </tr>  
                 </thead>  
                 <?php  
