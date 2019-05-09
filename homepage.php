@@ -16,7 +16,7 @@ else{
 	 			<div class="card" style="width: 18rem;">
   					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Monitors: <?php echo $monitorcount;?></p>
+   							 <p class="card-text">Total Number of Monitors: <?php echo $monitorcount?></p>
   						</div>
 				</div>
 	 		</div>
@@ -24,7 +24,7 @@ else{
 	 			<div class="card" style="width: 18rem;">
   					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Monitors: <?php echo $monitorcount;?></p>
+   							 <p class="card-text">Total Number of Monitors: <?php?></p>
   						</div>
 				</div>
 	 		</div>
@@ -32,7 +32,7 @@ else{
 	 			<div class="card" style="width: 18rem;">
   					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Monitors: <?php echo $monitorcount;?></p>
+   							 <p class="card-text">Total Number of Monitors: <?php?></p>
   						</div>
 				</div>
 	 		</div>
