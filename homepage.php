@@ -36,7 +36,7 @@ else{
 	 			<div class="card" style="width: 18rem;">
   					<img class="card-img-top mx-auto d-block" src="resources/mouse.png" style="width: 200px; height: 200px;" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Mouse: <?php?></p>
+   							 <p class="card-text">Total Number of Mouse: <?php echo $mousecount?></p>
   						</div>
 				</div>
 	 		</div>
