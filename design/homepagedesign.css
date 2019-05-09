@@ -4,3 +4,7 @@ html,body{
 height: 100%;
 font-family: 'Numans', sans-serif;
 }
+
+.card{
+	border: none!important;
+}
