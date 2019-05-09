@@ -9,6 +9,7 @@ else{
 	require 'includes/assetcounter.inc.php';
 }
 ?>
+<link rel="stylesheet" type="text/css" href="design/homepagedesign.css">
 <body>
 	 <div class="container" style="margin-top: 50px;">
 	 	<div class="row">
@@ -22,9 +23,9 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-  					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
+  					<img class="card-img-top" src="resources/keyboard.jpg" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Monitors: <?php?></p>
+   							 <p class="card-text">Total Number of Keyboard: <?php echo $keyboardcount?></p>
   						</div>
 				</div>
 	 		</div>
