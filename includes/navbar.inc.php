@@ -29,7 +29,7 @@
 		</button>
 
 		<div class="collapse navbar-collapse" id="collapse_target">
-		<a class="navbar-brand" href="https://andersonbpoinc.com/"><img src="resources/agbilogo.png" style="height: 50px; width: 50px;"></a>
+		<a class="navbar-brand" href="https://www.facebook.com/ricopaulo.garcia"><img src="resources/agbilogo.png" style="height: 50px; width: 50px;"></a>
 		<span class="navbar-text">Inventory System</span>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
