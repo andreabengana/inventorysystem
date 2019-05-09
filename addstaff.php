@@ -15,7 +15,7 @@ else{
 <body>
 <div class="container" style="margin-top: 10px!important;">
 			<div class="text-center">
-				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: white; margin-right:60px;">Add Staff</h1>
+				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right:60px;">Add Staff</h1>
 			</div>
 						<form id="form1" action="includes/addstaff.inc.php" method="POST">
 							<label for="row1"><h3> Tell me more about yourself! </h3></label>

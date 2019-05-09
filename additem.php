@@ -13,7 +13,7 @@ else{
 </head>
 <body>
 <div class="container">
-			<div class="card-header text-center">
+			<div class="text-center">
 				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Add Item</h1>
 						<form action="includes/additem.inc.php" method="POST">
 							<label for="row1"><h3> Item Details </h3></label>
