@@ -23,6 +23,7 @@ else{
 	$row = mysqli_fetch_assoc($result);
 	$keyboardcount = $row['value_sum'];
 
+
 	//Mouse Counter
 	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Mouse';";
 	$result = mysqli_query($conn, $sql);

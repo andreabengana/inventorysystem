@@ -68,6 +68,32 @@ else{
 					</div>
 	 			</div>
 	 		</div>
+	 			<div class="row" style="margin-top: 50px;">
+	 			<div class="col">
+	 				<div class="card" style="width: 18rem;">
+  					<img class="card-img-top mx-auto d-block" src="resources/telephone.png" style="width: 100px; height: 100px;" alt="Card image cap">
+  						<div class="card-body">
+   							 <p class="card-text text-center">Telephone Stock: <?php?></p>
+  						</div>
+					</div>
+	 			</div>
+	 			<div class="col">
+	 				<div class="card" style="width: 18rem;">
+  					<img class="card-img-top mx-auto d-block" src="resources/table.png" style="width: 100px; height: 100px;" alt="Card image cap">
+  						<div class="card-body">
+   							 <p class="card-text text-center">Table Stock: <?php?></p>
+  						</div>
+					</div>
+	 			</div>
+	 			<div class="col">
+	 				<div class="card" style="width: 18rem;">
+  					<img class="card-img-top mx-auto d-block" src="resources/chair.png" style="width: 100px; height: 100px;" alt="Card image cap">
+  						<div class="card-body">
+   							 <p class="card-text text-center">Chair Stock: <?php?></p>
+  						</div>
+					</div>
+	 			</div>
+	 		</div>
 	 	</div>
 	 </div>
 </body>
