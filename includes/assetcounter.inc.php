@@ -10,7 +10,7 @@ else{
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	$totalassets = $row['total_sum'];
-	
+
 	//Monitor Counter
 	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Monitor';";
 	$result = mysqli_query($conn, $sql);
@@ -23,11 +23,16 @@ else{
 	$row = mysqli_fetch_assoc($result);
 	$keyboardcount = $row['value_sum'];
 
-
 	//Mouse Counter
 	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Mouse';";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
 	$mousecount = $row['value_sum'];
+
+	//Headphones Counter
+	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Headphones';";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$headphonecount = $row['value_sum'];
 
 }		

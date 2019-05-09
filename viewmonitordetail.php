@@ -10,7 +10,7 @@ else{
 }
 
 ?>
-<body>t
+<body>
 	 <div class="container" style="margin-top: 50px;">
         <div class="table-responsive">  
             <table id="employee_data" class="table table-striped table-bordered">  

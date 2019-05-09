@@ -55,7 +55,7 @@ else{
 	 				<div class="card" style="width: 18rem;">
   					<img class="card-img-top mx-auto d-block" src="resources/headphones.png" style="width: 100px; height: 100px;" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text text-center">Headphones Stock: <?php?></p>
+   							 <p class="card-text text-center">Headphones Stock: <?php echo $headphonecount?></p>
   						</div>
 					</div>
 	 			</div>
