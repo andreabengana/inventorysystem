@@ -16,7 +16,7 @@ else{
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
 	 				<a href="viewmonitordetail.php">
-  					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
+  					<img class="card-img-top mx-auto d-block" src="resources/monitor.png" style="width: 200px; height: 200px;" alt="Card image cap">
   					</a>
   						<div class="card-body">
    							 <p class="card-text">Total Number of Monitors: <?php echo $monitorcount?></p>
@@ -25,7 +25,8 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-  					<img class="card-img-top mx-auto d-block" src="resources/keyboard.png" style="width: 200px; height: 200px;"alt="Card image cap">
+  					<img class="card-img-top mx-auto d-block" src="resources/keyboard.png" style="width: 200px; height: 200px;" 
+  					alt="Card image cap">
   						<div class="card-body">
    							 <p class="card-text">Total Number of Keyboard: <?php echo $keyboardcount?></p>
   						</div>
@@ -33,9 +34,9 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-  					<img class="card-img-top" src="resources/monitor.jpg" alt="Card image cap">
+  					<img class="card-img-top mx-auto d-block" src="resources/mouse.png" style="width: 200px; height: 200px;" alt="Card image cap">
   						<div class="card-body">
-   							 <p class="card-text">Total Number of Monitors: <?php?></p>
+   							 <p class="card-text">Total Number of Mouse: <?php?></p>
   						</div>
 				</div>
 	 		</div>
