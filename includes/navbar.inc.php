@@ -1,4 +1,15 @@
+<?php
 
+if (!isset($_SESSION['userUid'])) {
+	header("Location: login.php");
+}
+
+
+
+
+
+
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,9 +52,16 @@
 			<li class="nav-item">
 				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Item </a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="includes/logout.inc.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout </a>
-			</li>
+			<div class="dropdown">
+  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent!important; border: none;">
+   				 <?php echo $_SESSION['fname'] ?>
+ 				 </button>
+  					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    				<a class="dropdown-item" href="../dispatch.php">Dispatch</a>
+   					<a class="dropdown-item" href="../transfer.php">Transfer</a>
+    				<a class="dropdown-item" href="includes/logout.inc.php">Log Out</a>
+  					</div>
+			</div>
 		</ul>
 		</div>
 	</nav>
