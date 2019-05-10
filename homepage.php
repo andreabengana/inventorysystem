@@ -37,7 +37,9 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
+				 	<a href="showdevice.php?device=mouse">
   					<img class="card-img-top mx-auto d-block" src="resources/mouse.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Mouse Stock: <?php echo $mousecount?></p>
   						</div>
@@ -47,7 +49,9 @@ else{
 	 		<div class="row" style="margin-top: 50px;">
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=avr">
   					<img class="card-img-top mx-auto d-block" src="resources/avr.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Power Source Stock: <?php?></p>
   						</div>
@@ -55,7 +59,9 @@ else{
 	 			</div>
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=headphones">
   					<img class="card-img-top mx-auto d-block" src="resources/headphones.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Headphones Stock: <?php echo $headphonecount?></p>
   						</div>
@@ -63,7 +69,9 @@ else{
 	 			</div>
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=systemunit">
   					<img class="card-img-top mx-auto d-block" src="resources/system-unit.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">System Unit Stock: <?php?></p>
   						</div>
@@ -73,7 +81,9 @@ else{
 	 			<div class="row" style="margin-top: 50px;">
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=telephone">
   					<img class="card-img-top mx-auto d-block" src="resources/telephone.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Telephone Stock: <?php?></p>
   						</div>
@@ -81,7 +91,9 @@ else{
 	 			</div>
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=table">
   					<img class="card-img-top mx-auto d-block" src="resources/table.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Table Stock: <?php?></p>
   						</div>
@@ -89,7 +101,9 @@ else{
 	 			</div>
 	 			<div class="col">
 	 				<div class="card" style="width: 18rem;">
+					<a href="showdevice.php?device=chair">
   					<img class="card-img-top mx-auto d-block" src="resources/chair.png" style="width: 100px; height: 100px;" alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Chair Stock: <?php?></p>
   						</div>
