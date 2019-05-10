@@ -52,16 +52,16 @@ if (!isset($_SESSION['userUid'])) {
 			<li class="nav-item">
 				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Item </a>
 			</li>
-			<div class="dropdown">
-  				<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="background-color: transparent!important; border: none;">
-   				 <?php echo $_SESSION['fname'] ?>
- 				 </button>
-  					<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    				<a class="dropdown-item" href="../dispatch.php">Dispatch</a>
-   					<a class="dropdown-item" href="../transfer.php">Transfer</a>
-    				<a class="dropdown-item" href="includes/logout.inc.php">Log Out</a>
-  					</div>
-			</div>
+			 <li class="nav-item dropdown">
+        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          		<?php echo $_SESSION['fname']?>
+        		</a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item text-center" href="#">Dispatch</a>
+          <a class="dropdown-item text-center" href="#">Transfer</a>
+          <a class="dropdown-item text-center" href="includes/logout.inc.php">Log Out</a>
+        </div>
+      </li>
 		</ul>
 		</div>
 	</nav>
