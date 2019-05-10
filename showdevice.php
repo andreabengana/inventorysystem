@@ -52,6 +52,104 @@ else{
                     </tr>';
                 }
                 }
+                elseif($_GET['device'] == 'mouse'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Mouse';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'avr'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'AVR';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'headphones'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'AVR';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'systemunit'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'System Unit';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'telephones'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Telephone';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'table'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Table';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
+                elseif($_GET['device'] == 'chair'){
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Chair';";
+                    $result = mysqli_query($conn, $sql);
+                    while ($row = mysqli_fetch_assoc($result)){ 
+                        echo '<tr>  
+                            <td>'.$row["productID"].'</td>  
+                            <td>'.$row["productCompanyCode"].'</td>  
+                            <td>'.$row["productBrand"].'</td>  
+                            <td>'.$row["productModel"].'</td>  
+                            <td>'.$row["productDesc"].'</td>  
+                            <td>'.$row["productStocks"].'</td>
+                        </tr>';
+                }
+                }
             ?>
             </table>  
      </div>
