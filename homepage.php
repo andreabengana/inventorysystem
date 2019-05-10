@@ -16,7 +16,6 @@ else{
 	 	<div class="row">
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-
 	 				<a href="showdevice.php?device=monitor">
   					<img class="card-img-top mx-auto d-block" src="resources/monitor.png" style="width: 100px; height: 100px;" alt="Card image cap">
   					</a>
@@ -27,7 +26,7 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-			 <a href="showdevice.php?device=keyboard">
+	 				<a href="showdevice.php?device=keyboard">
   					<img class="card-img-top mx-auto d-block" src="resources/keyboard.png" style="width: 100px; height: 100px;" 
   					alt="Card image cap">
   					</a>
