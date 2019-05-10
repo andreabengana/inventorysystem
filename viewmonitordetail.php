@@ -21,24 +21,49 @@ else{
                         <td>Brand</td>  
                         <td>Model</td>  
                         <td>Description</td>  
-                        <td>Product Count</td>  
+                        <td>Stock Count</td>  
                     </tr>  
                 </thead>  
-                <?php  
-                $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Monitor';";
-                $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo '  
-                    <tr>  
-                        <td>'.$row["productID"].'</td>  
-                        <td>'.$row["productCompanyCode"].'</td>  
-                        <td>'.$row["productBrand"].'</td>  
-                        <td>'.$row["productModel"].'</td>  
-                        <td>'.$row["productDesc"].'</td>  
-                        <td>'.$row["productStocks"].'</td>
-                    </tr>  
-                    ';
+                <?php
+                
+                $view = $_REQUEST['view'];
+                if(isset($view)) {
+                    if($view == 'monitor'){
+                        $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Monitor';";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo '  
+                            <tr>  
+                                <td>'.$row["productID"].'</td>  
+                                <td>'.$row["productCompanyCode"].'</td>  
+                                <td>'.$row["productBrand"].'</td>  
+                                <td>'.$row["productModel"].'</td>  
+                                <td>'.$row["productDesc"].'</td>  
+                                <td>'.$row["productStocks"].'</td>
+                            </tr>  
+                            ';
+                        }
+                    } else if($view == 'keyboard'){
+                        $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Keyboard';";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)){
+                            echo '  
+                            <tr>  
+                                <td>'.$row["productID"].'</td>  
+                                <td>'.$row["productCompanyCode"].'</td>  
+                                <td>'.$row["productBrand"].'</td>  
+                                <td>'.$row["productModel"].'</td>  
+                                <td>'.$row["productDesc"].'</td>  
+                                <td>'.$row["productStocks"].'</td>
+                            </tr>  
+                            ';
+                        }
+                    }
                 }
+                else {
+                    echo "job name is not set";
+                }
+                
                 ?>  
             </table>  
 	 </div>
