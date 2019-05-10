@@ -63,20 +63,7 @@ else{
                 else {
                     echo "job name is not set";
                 }
-                // $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Monitor';";
-                // $result = mysqli_query($conn, $sql);
-                // while ($row = mysqli_fetch_assoc($result)){
-                //     echo '  
-                //     <tr>  
-                //         <td>'.$row["productID"].'</td>  
-                //         <td>'.$row["productCompanyCode"].'</td>  
-                //         <td>'.$row["productBrand"].'</td>  
-                //         <td>'.$row["productModel"].'</td>  
-                //         <td>'.$row["productDesc"].'</td>  
-                //         <td>'.$row["productStocks"].'</td>
-                //     </tr>  
-                //     ';
-                // }
+                
                 ?>  
             </table>  
 	 </div>
