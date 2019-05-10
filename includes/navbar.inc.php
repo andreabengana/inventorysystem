@@ -53,15 +53,15 @@ if (!isset($_SESSION['userUid'])) {
 				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Item </a>
 			</li>
 			 <li class="nav-item dropdown">
-        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           		<?php echo $_SESSION['fname']?>
         		</a>
-        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item text-center" href="#">Dispatch</a>
-          <a class="dropdown-item text-center" href="#">Transfer</a>
-          <a class="dropdown-item text-center" href="includes/logout.inc.php">Log Out</a>
-        </div>
-      </li>
+        			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+         		 		<a class="dropdown-item text-center" href="dispatch.php">Dispatch Item</a>
+          				<a class="dropdown-item text-center" href="#">Transfer Item</a>
+          				<a class="dropdown-item text-center" href="includes/logout.inc.php">Log Out</a>
+        			</div>
+      		</li>
 		</ul>
 		</div>
 	</nav>
