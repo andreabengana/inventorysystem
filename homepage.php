@@ -16,7 +16,7 @@ else{
 	 	<div class="row">
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
-	 				<a href="viewmonitordetail.php">
+	 				<a href="viewmonitordetail.php?view=monitor">
   					<img class="card-img-top mx-auto d-block" src="resources/monitor.png" style="width: 100px; height: 100px;" alt="Card image cap">
   					</a>
   						<div class="card-body">
@@ -26,8 +26,10 @@ else{
 	 		</div>
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">
+					<a href="viewmonitordetail.php?view=keyboard">
   					<img class="card-img-top mx-auto d-block" src="resources/keyboard.png" style="width: 100px; height: 100px;" 
   					alt="Card image cap">
+					</a>
   						<div class="card-body">
    							 <p class="card-text text-center">Keyboard Stock: <?php echo $keyboardcount?></p>
   						</div>
