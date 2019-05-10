@@ -15,7 +15,7 @@ else{
 	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Monitor';";
 	$result = mysqli_query($conn, $sql);
 	$row = mysqli_fetch_assoc($result);
-	$monitorcount = $row['value_sum'];	
+	$monitorcount = $row['value_sum'];
 
 	//Keyboard Counter
 	$sql = "SELECT SUM(productStocks) AS value_sum FROM tblproducts WHERE productDesc = 'Keyboard';";

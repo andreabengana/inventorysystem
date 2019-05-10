@@ -1,4 +1,4 @@
-1<?php
+<?php
 session_start();
 
 if(!isset($_SESSION['userUid'])){
@@ -8,10 +8,9 @@ else{
     require 'includes/db.inc.php';
 	require 'includes/navbar.inc.php';
 }
-
 ?>
-<body>
-	 <div class="container" style="margin-top: 50px;">
+     <body>
+     <div class="container" style="margin-top: 50px;">
         <div class="table-responsive">  
             <table id="employee_data" class="table table-striped table-bordered">  
                 <thead>  
@@ -23,24 +22,39 @@ else{
                         <td>Description</td>  
                         <td>Product Count</td>  
                     </tr>  
-                </thead>  
-                <?php  
+                </thead>
+                <?php
+                if ($_GET['device'] == 'monitor'){    
                 $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Monitor';";
                 $result = mysqli_query($conn, $sql);
-                while ($row = mysqli_fetch_assoc($result)){
-                    echo '  
-                    <tr>  
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
                         <td>'.$row["productID"].'</td>  
                         <td>'.$row["productCompanyCode"].'</td>  
                         <td>'.$row["productBrand"].'</td>  
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>  
                         <td>'.$row["productStocks"].'</td>
-                    </tr>  
-                    ';
+                    </tr>';
                 }
-                ?>  
+                }
+                elseif($_GET['device'] == 'keyboard'){
+                $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Keyboard';";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productID"].'</td>  
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>  
+                        <td>'.$row["productStocks"].'</td>
+                    </tr>';
+                }
+                }
+            ?>
             </table>  
-	 </div>
+     </div>
 </body>
 </html>
+
