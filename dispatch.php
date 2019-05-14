@@ -23,7 +23,7 @@ else{
       								<label for="inputfirstname">Device Type</label>
       								<select  class="form-control" placeholder="Device Type" name="productdesc">
       									<?php
-      									$sql = "SELECT DISTINCT productDesc FROM tblproducts;";
+      									$sql = "SELECT DISTINCT productDesc FROM tblproducts ORDER BY productDesc ASC;";
       									$result = mysqli_query($conn, $sql);
       									while ($row = mysqli_fetch_assoc($result)){
       									echo '<option>'.$row['productDesc'].'</option>';
@@ -34,6 +34,13 @@ else{
     							<div class="form-group col-md-6">
      								 <label for="inputlastname">Brand</label>
      								 <select class="form-control" placeholder="-Brand Name-" name="productbrand">
+     								 	<?php
+     								 	$sql = "SELECT DISTINCT productBrand FROM tblproducts ORDER BY productBrand ASC;";
+     								 	$result = mysqli_query($conn, $sql);
+     								 	while($row = mysqli_fetch_assoc($result)){
+     								 		echo '<option>'.$row['productBrand'].'</option>';
+     								 	}
+     								 	?>
                     				</select>
     							</div>
   							</div>
