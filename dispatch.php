@@ -20,7 +20,7 @@ else{
 							<label for="row1"><h3> Item Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
     							<div class="form-group col-md-6">
-      								<label for="inputfirstname">Supplier</label>
+      								<label for="inputfirstname">Device Type</label>
       								<select  class="form-control" placeholder="Device Type" name="productdesc">
       									<?php
       									$sql = "SELECT DISTINCT productDesc FROM tblproducts;";

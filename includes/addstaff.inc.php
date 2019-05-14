@@ -29,11 +29,19 @@ else{
 		header("Location: ../addstaff.php?error=password");
 	}
 	else{
+		$sql = "SELECT * FROM users WHERE user_uid = '$username' OR user_email = '$email';";
+		$result = mysqli_query($conn, $sql);
+		$resultCheck = mysqli_num_rows($result);
+		if($resultCheck > 0){
+			header("Location: ../addstaff.php?error=usernametaken");
+		}
+		else{
 		$hashedpwd = password_hash($password1, PASSWORD_DEFAULT);
 		$sql = "INSERT INTO users (user_uid, user_password, user_email, user_fname, user_lname) VALUES ('$username', '$hashedpwd', '$email', '$fname', '$lname');";
 
 		mysqli_query($conn, $sql);
 		header("Location: ../addstaff.php?staffadded");
 		exit();
+	}
 	}
 }
