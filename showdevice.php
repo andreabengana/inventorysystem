@@ -81,7 +81,7 @@ else{
                 }
                 }
                 elseif($_GET['device'] == 'headphones'){
-                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'AVR';";
+                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Headphones';";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)){ 
                         echo '<tr>  
