@@ -12,7 +12,7 @@ else{
 <link rel="stylesheet" type="text/css" href="design/homepagedesign.css">
 <body>
 	<label for="main-container" style="margin-left: 20px; margin-top: 20px;"><h3> Total Number of Assets: <?php echo $totalassets?></h3></label>
-	 <div class="container" style="margin-top: 50px;" id="main-container">
+	 <div class="container mx-auto d-block" style="margin-top: 50px;" id="main-container">
 	 	<div class="row">
 	 		<div class="col">
 	 			<div class="card" style="width: 18rem;">

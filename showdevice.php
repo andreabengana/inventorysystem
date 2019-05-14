@@ -13,8 +13,8 @@ else{
      <body>
      <div class="container" style="margin-top: 50px;">
         <div class="table-responsive">  
-            <table id="employee_data" class="table table-striped table-bordered text-center">  
-                <thead>  
+            <table id="employee_data" class="table table-bordered text-center">  
+                <thead class="table-primary">  
                     <tr>  
                         <td>Product ID</td>  
                         <td>Company Code</td>  
