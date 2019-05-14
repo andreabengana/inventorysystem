@@ -9,10 +9,11 @@ else{
 	require 'includes/navbar.inc.php';
 }
 ?>
+    <link rel="stylesheet" type="text/css" href="design/showdevicedesign.css">
      <body>
      <div class="container" style="margin-top: 50px;">
         <div class="table-responsive">  
-            <table id="employee_data" class="table table-striped table-bordered">  
+            <table id="employee_data" class="table table-striped table-bordered text-center">  
                 <thead>  
                     <tr>  
                         <td>Product ID</td>  
@@ -20,7 +21,8 @@ else{
                         <td>Brand</td>  
                         <td>Model</td>  
                         <td>Description</td>  
-                        <td>Product Count</td>  
+                        <td>Product Count</td>
+                        <td>Date Received </td>  
                     </tr>  
                 </thead>
                 <?php
@@ -35,6 +37,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>  
                         <td>'.$row["productStocks"].'</td>
+                        <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
                 }
@@ -49,6 +52,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>  
                         <td>'.$row["productStocks"].'</td>
+                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
                 }
@@ -63,6 +67,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -77,6 +82,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -91,6 +97,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -105,6 +112,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -119,6 +127,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -133,6 +142,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
@@ -147,6 +157,7 @@ else{
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
                             <td>'.$row["productStocks"].'</td>
+                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
                 }
