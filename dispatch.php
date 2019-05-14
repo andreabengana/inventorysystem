@@ -45,15 +45,11 @@ else{
     							</div>
   							</div>
                 <div class="form-row" id="row2">
-  								<div class="form-group col-md-6">
+  								<div class="form-group col-md-6 mx-auto d-block">
   									<label for="inputemail">Product Model</label>
   									<input type="text" name="code1" class="form-control" placeholder="-Product Code-">
   							</div>
-                <div class="form-group col-md-6">
-                    <label for="inputemail">Repeat Product Model</label>
-                    <input type="text" name="code2" class="form-control" placeholder="-Repeat Product Code-">
-                </div>
-              </div>  
+  						</div>
   							<div class="form-row" id="row2">
   								<div class="form-group col-md-6">
       								<label for="inputmfirstname">Product Type</label>
@@ -72,7 +68,7 @@ else{
     							</div>
     							<div class="form-group col-md-6">
       								<label for="inputmlname">Quantity</label>
-      								<input type="text" class="form-control"  placeholder="-Number of Product received-" name="stocks">
+      								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="stocks">
     							</div>
   							</div>
  								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
