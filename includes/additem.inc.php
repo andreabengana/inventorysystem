@@ -10,6 +10,7 @@ if(isset($_POST['additembtn'])){
 	$code2 = $_POST['code2'];
 	$producttype = $_POST['producttype'];
 	$stocks = $_POST['stocks'];
+
 		
 
 if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($stocks)){
@@ -21,7 +22,7 @@ elseif($code1 !== $code2){
 	exit();
 }
 else{
-			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productStocks) 
+			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productQuantity) 
 			VALUES 
 			('$companyname', '$brand', '$code1', '$producttype', '$stocks');";
 			

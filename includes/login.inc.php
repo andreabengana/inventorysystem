@@ -13,10 +13,10 @@ if(empty($mailuid) || empty($password)){
 	exit();
 }
 else{
-	$sql = "SELECT * FROM users WHERE user_uid= '$mailuid' OR user_email= '$mailuid';";
+	$sql = "SELECT * FROM tblusers WHERE userName = '$mailuid' OR userEmail = '$mailuid';";
 	$result = mysqli_query($conn, $sql);
 		if($row = mysqli_fetch_assoc($result)){
-			$dbpassword = $row['user_password'];
+			$dbpassword = $row['userPassword'];
 			$pwdCheck = password_verify($password, $dbpassword);
 			if($password !== $dbpassword AND $pwdCheck == false){
 				header("Location: ../login.php?invalidpassword");
@@ -24,10 +24,10 @@ else{
 			}
 			else{
 				session_start();
-					$_SESSION['userUid'] = $row['user_uid'];
-					$_SESSION['usertype'] = $row['user_type'];
-					$_SESSION['fname'] = $row['user_fname'];
-					$_SESSION['lname'] = $row['user_lname'];
+					$_SESSION['userUid'] = $row['userName'];
+					$_SESSION['usertype'] = $row['userType'];
+					$_SESSION['fname'] = $row['personnelFirstName'];
+					$_SESSION['lname'] = $row['personnelLastName'];
 					header("Location: ../homepage.php");
 			}
 		}
