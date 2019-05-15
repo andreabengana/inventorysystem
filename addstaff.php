@@ -13,7 +13,7 @@ else{
 	<link rel="stylesheet" type="text/css" href="design/additemdesign.css">
 </head>
 <body>
-<div class="container" style="margin-top: 10px!important;">
+<div class="container" style="margin-top: 50px!important;">
 			<div class="text-center">
 				<a href="homepage.php" class="btn btn-danger float-left">Back</a><h1 style="color: black; margin-right:60px;">Add User</h1>
 			</div>
@@ -35,10 +35,18 @@ else{
   							</div>
   							<label for="row3"><h3>Account Details</h3></label>
   							<div class="form-row" id="row3">
-									<div class="form-group col-md-12">
+									<div class="form-group col-md-6">
   										<label for="username"> Username </label>
   										<input type="text" name="username" id="username" class="form-control" placeholder="rocketwarrior">
 									</div>
+                    <div class="form-group col-md-6">
+                      <label for="usertype"> Usertype </label>
+                      <select name="usertype" id="usertype" class="form-control" placeholder="rocketwarrior">
+                        <option> Admin Staff</option>
+                        <option> Finance </option>
+                        <option> IT </option>
+                      </select>
+                  </div>
 									<div class="form-group col-md-6">
   										<label for="password1"> Password </label>
   										<input type="password" name="password1" id="password1" class="form-control">
