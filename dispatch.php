@@ -4,10 +4,10 @@ session_start();
 if(!isset($_SESSION['userUid'])){
 	header("Location: login.php");
 }
-else{
+
 	require 'includes/db.inc.php';
 	require 'includes/navbar.inc.php';
-}
+
 ?>
 <head>
   <link rel="stylesheet" type="text/css" href="design/additemdesign.css">
@@ -16,7 +16,7 @@ else{
 <div class="container">
 			<div class="text-center">
 				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Dispatch Item</h1>
-						<form action="includes/dispatch.inc.php" method="GET">
+						<form action="includes/dispatch.inc.php" method="POST">
 							<label for="row1"><h3> Item Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
     							<div class="form-group col-md-6">
@@ -41,7 +41,7 @@ else{
      								 		echo '<option value='.$row['productBrand'].'>'.$row['productBrand'].'</option>';
      								 	}
      								 	?>
-                    				</select>
+                    </select>
     							</div>
   							</div>
                 <div class="form-row" id="row2">
@@ -58,7 +58,13 @@ else{
                   <label>Dispatch to which Department?</label>
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
                 </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Add Item</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Item</button>
+
+                 <?php
+                if ($_GET['error'] == 'empty') {
+                  echo '<p style="color: red;"> Please fill up all fields! </p>';
+                }
+                ?>
 						</form>
 			</div>
 		</div>

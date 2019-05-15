@@ -36,7 +36,7 @@ else{
                         <td>'.$row["productBrand"].'</td>  
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>  
-                        <td>'.$row["productStocks"].'</td>
+                        <td>'.$row["productQuantity"].'</td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
@@ -51,7 +51,7 @@ else{
                         <td>'.$row["productBrand"].'</td>  
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>  
-                        <td>'.$row["productStocks"].'</td>
+                        <td>'.$row["productQuantity"].'</td>
                          <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
@@ -66,7 +66,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -81,7 +81,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                              <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -96,7 +96,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                              <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -111,7 +111,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                              <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -126,7 +126,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -141,7 +141,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                             <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
@@ -156,7 +156,7 @@ else{
                             <td>'.$row["productBrand"].'</td>  
                             <td>'.$row["productModel"].'</td>  
                             <td>'.$row["productDesc"].'</td>  
-                            <td>'.$row["productStocks"].'</td>
+                            <td>'.$row["productQuantity"].'</td>
                              <td>'.$row["dateAccepted"].'</td>
                         </tr>';
                 }
