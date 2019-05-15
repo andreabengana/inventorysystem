@@ -14,7 +14,7 @@ else{
 <body>
 <div class="container">
 			<div class="text-center">
-				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Add Item</h1>
+				<a href="homepage.php" class="btn btn-danger float-left">Back</a><h1 style="color: black; margin-right: 90px;">Add Asset</h1>
 						<form action="includes/additem.inc.php" method="POST">
 							<label for="row1"><h3> Asset Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
@@ -64,7 +64,7 @@ else{
       								<input type="text" class="form-control"  placeholder="-Number of Product received-" name="stocks">
     							</div>
   							</div>
- 								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Asset</button>
 						</form>
 			</div>
 		</div>

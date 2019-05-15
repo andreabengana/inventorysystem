@@ -15,9 +15,9 @@ if(!isset($_SESSION['userUid'])){
 <body>
 <div class="container">
 			<div class="text-center">
-				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Dispatch Item</h1>
+				<a href="homepage.php" class="btn btn-danger float-left">Back</a><h1 style="color: black; margin-right: 90px;">Dispatch Asset</h1>
 						<form action="includes/dispatch.inc.php" method="POST">
-							<label for="row1"><h3> Item Details </h3></label>
+							<label for="row1"><h3> Asset Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
     							<div class="form-group col-md-6">
       								<label for="inputfirstname">Device Type</label>
@@ -55,10 +55,10 @@ if(!isset($_SESSION['userUid'])){
     							</div>
                 </div>
                 <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
-                  <label>Dispatch to which Department?</label>
+                  <label>Dispatch to?</label>
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
                 </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Item</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Asset</button>
                  <?php
                 if ($_GET['error'] == 'empty') {
                   echo '<p style="color: red;"> Please fill up all fields! </p>';
