@@ -32,7 +32,7 @@ if (!isset($_SESSION['userUid'])) {
 
 		<div class="collapse navbar-collapse" id="collapse_target">
 		<a class="navbar-brand" href="https://andersonbpoinc.com/"><img src="resources/agbilogo.png" style="height: 50px; width: 50px;"></a>
-		<span class="navbar-text">Inventory System</span>
+		<span class="navbar-text">Asset Management System</span>
 		<ul class="navbar-nav ml-auto">
 			<li class="nav-item">
 				<a class="nav-link" href="homepage.php"><i class="fa fa-home"></i> Home </a>
@@ -41,15 +41,15 @@ if (!isset($_SESSION['userUid'])) {
 				<a class="nav-link" href="addstaff.php"><i class="fa fa-plus"></i> Add Staff </a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Item </a>
+				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Asset </a>
 			</li>
 			 <li class="nav-item dropdown">
         		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           		<?php echo $_SESSION['fname']?>
         		</a>
         			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-         		 		<a class="dropdown-item text-center" href= "dispatch.php">Dispatch Item</a>
-          				<a class="dropdown-item text-center" href= "transfer.php">Transfer Item</a>
+         		 		<a class="dropdown-item text-center" href= "dispatch.php">Dispatch Asset</a>
+          				<a class="dropdown-item text-center" href= "transfer.php">Transfer Asset</a>
           				<a class="dropdown-item text-center" href= "includes/logout.inc.php">Log Out</a>
         			</div>
       		</li>
