@@ -13,6 +13,7 @@ else{
 	$username = $_POST['username'];
 	$password1 = $_POST['password1'];
 	$password2 = $_POST['password2'];
+	$usertype = $_POST['usertype'];
 
 	if(empty($fname) || empty($lname) || empty($email) || empty($username) || empty($password1) || empty($password2)){
 		header("Location: ../addstaff.php?error=empty");
@@ -29,7 +30,7 @@ else{
 		header("Location: ../addstaff.php?error=password");
 	}
 	else{
-		$sql = "SELECT * FROM users WHERE user_uid = '$username' OR user_email = '$email';";
+		$sql = "SELECT * FROM tblusers WHERE userName = '$username' OR userEmail = '$email';";
 		$result = mysqli_query($conn, $sql);
 		$resultCheck = mysqli_num_rows($result);
 		if($resultCheck > 0){
@@ -37,7 +38,7 @@ else{
 		}
 		else{
 		$hashedpwd = password_hash($password1, PASSWORD_DEFAULT);
-		$sql = "INSERT INTO users (user_uid, user_password, user_email, user_fname, user_lname) VALUES ('$username', '$hashedpwd', '$email', '$fname', '$lname');";
+		$sql = "INSERT INTO tblusers (userName, userEmail, userPassword, userType, personnelFirstName, personnelLastName) VALUES ('$username', '$email', '$hashedpwd', '$usertype', '$fname', '$lname');";
 
 		mysqli_query($conn, $sql);
 		header("Location: ../addstaff.php?staffadded");
