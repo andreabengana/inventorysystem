@@ -1,5 +1,6 @@
-  <?php
+<?php
 session_start();
+
 
 if(!isset($_SESSION['userUid'])){
 	header("Location: login.php");
@@ -9,14 +10,11 @@ else{
 	require 'includes/navbar.inc.php';
 }
 ?>
-<head>
-  <link rel="stylesheet" type="text/css" href="design/additemdesign.css">
-</head>
-<body>
+<link rel="stylesheet" type="text/css" href="design/additemdesign.css">
 <div class="container">
 			<div class="text-center">
-				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Dispatch Item</h1>
-						<form action="includes/dispatch.inc.php" method="POST">
+				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right: 90px;">Transfer Item</h1>
+						<form action="includes/transfer.inc.php" method="POST">
 							<label for="row1"><h3> Item Details </h3></label>
   							<div class="form-row" id="row1" style="margin-top: 0px!important;">
     							<div class="form-group col-md-6">
@@ -54,10 +52,7 @@ else{
       								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="stocks">
     							</div>
                 </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="transferbtn">Add Item</button>
 						</form>
 			</div>
 		</div>
-</body>
-</html>
-

@@ -57,9 +57,9 @@ if (!isset($_SESSION['userUid'])) {
           		<?php echo $_SESSION['fname']?>
         		</a>
         			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-         		 		<a class="dropdown-item text-center" href="dispatch.php">Dispatch Item</a>
-          				<a class="dropdown-item text-center" href="#">Transfer Item</a>
-          				<a class="dropdown-item text-center" href="includes/logout.inc.php">Log Out</a>
+         		 		<a class="dropdown-item text-center" href= "dispatch.php">Dispatch Item</a>
+          				<a class="dropdown-item text-center" href= "transfer.php">Transfer Item</a>
+          				<a class="dropdown-item text-center" href= "includes/logout.inc.php">Log Out</a>
         			</div>
       		</li>
 		</ul>
