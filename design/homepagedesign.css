@@ -5,9 +5,15 @@ height: 100%;
 font-family: 'Numans', sans-serif;
 }
 
-.card{
-	border: none!important;
-}
 .container{
 	width: 100%;
+	margin-top: 20px;
+}
+.card{
+	border-radius: 10px;
+	margin-left: 20px;
+	color: white;
+}
+.card-header{
+	border: none!important;
 }
