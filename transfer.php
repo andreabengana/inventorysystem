@@ -43,7 +43,7 @@ else{
     							</div>
   							</div>
                 <div class="form-row" id="row2">
-  								<div class="form-group col-md-6 mx-auto d-block">
+  								<div class="form-group col-md-6">
   									<label for="inputemail">Product Model</label>
   									<input type="text" name="code1" class="form-control" placeholder="-Product Code-">
   							  </div>
@@ -52,6 +52,16 @@ else{
       								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="stocks">
     							</div>
                 </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                  <label>Transfer from which Department?</label>
+                      <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div>
+                <div class="form-group col-md-6">
+                  <label>Transfer to which Department?</label>
+                      <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div>
+              </div>
  								<button type="submit" class="btn btn-lg btn-success" name="transferbtn">Add Item</button>
 						</form>
 			</div>
