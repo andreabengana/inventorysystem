@@ -18,7 +18,7 @@ else{
 				<a href="homepage.php" class="btn btn-danger float-left">Go Back</a><h1 style="color: black; margin-right:60px;">Add Staff</h1>
 			</div>
 						<form id="form1" action="includes/addstaff.inc.php" method="POST">
-							<label for="row1"><h3> Tell me more about yourself! </h3></label>
+							<!-- <label for="row1"><h3> Tell me more about yourself! </h3></label> -->
   							<div class="form-row" id="row1">
     							<div class="form-group col-md-6">
       								<label for="inputfirstname">First Name</label>
