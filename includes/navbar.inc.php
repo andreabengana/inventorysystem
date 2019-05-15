@@ -38,7 +38,7 @@ if (!isset($_SESSION['userUid'])) {
 				<a class="nav-link" href="homepage.php"><i class="fa fa-home"></i> Home </a>
 			</li>
 			<li class="nav-item">
-				<a class="nav-link" href="addstaff.php"><i class="fa fa-plus"></i> Add Staff </a>
+				<a class="nav-link" href="addstaff.php"><i class="fa fa-plus"></i> Add User </a>
 			</li>
 			<li class="nav-item">
 				<a class="nav-link" href="additem.php"><i class="fa fa-plus"></i> Add Asset </a>
