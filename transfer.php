@@ -62,7 +62,7 @@ else{
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
                 </div>
               </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="transferbtn">Add Item</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="transferbtn">Transfer Item</button>
 						</form>
 			</div>
 		</div>

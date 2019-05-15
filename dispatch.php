@@ -59,7 +59,6 @@ if(!isset($_SESSION['userUid'])){
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
                 </div>
  								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Item</button>
-
                  <?php
                 if ($_GET['error'] == 'empty') {
                   echo '<p style="color: red;"> Please fill up all fields! </p>';
