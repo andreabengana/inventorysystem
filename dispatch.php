@@ -26,7 +26,7 @@ else{
       									$sql = "SELECT DISTINCT productDesc FROM tblproducts ORDER BY productDesc ASC;";
       									$result = mysqli_query($conn, $sql);
       									while ($row = mysqli_fetch_assoc($result)){
-      									echo '<option>'.$row['productDesc'].'</option>';
+      									echo '<option value='.$row['productDesc'].'>'.$row['productDesc'].'</option>';
       								}
       									?>
       								</select>
@@ -38,7 +38,7 @@ else{
      								 	$sql = "SELECT DISTINCT productBrand FROM tblproducts ORDER BY productBrand ASC;";
      								 	$result = mysqli_query($conn, $sql);
      								 	while($row = mysqli_fetch_assoc($result)){
-     								 		echo '<option>'.$row['productBrand'].'</option>';
+     								 		echo '<option value='.$row['productBrand'].'>'.$row['productBrand'].'</option>';
      								 	}
      								 	?>
                     				</select>
@@ -51,10 +51,14 @@ else{
   							  </div>
     							<div class="form-group col-md-6">
       								<label for="inputmlname">Quantity</label>
-      								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="stocks">
+      								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="quantity">
     							</div>
                 </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
+                <label>Dispatch to which Department?</label>
+                <div class="form-group col-md-6 mx-auto d-block">
+                      <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div>
+ 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Add Item</button>
 						</form>
 			</div>
 		</div>
