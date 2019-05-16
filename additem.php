@@ -11,6 +11,7 @@ else{
 ?>
 <head>
   <link rel="stylesheet" type="text/css" href="design/additemdesign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -27,10 +28,10 @@ else{
      								 <label for="inputlastname">Brand</label>
      								 <input list="brands" class="form-control" placeholder="-Brand Name-" name="productbrand">
                      <datalist id="brands">
-                        <option value="Acer">
-                        <option value="Samsung">
-                        <option value="Apple">
-                        <option value="Logitech">
+                        <option value="Acer">Acer</option>
+                        <option value="Samsung">Samsung</option>
+                        <option value="Apple">Apple</option>
+                        <option value="Logitech">Logitech</option>
                         <?php
                         $sql = "SELECT DISTINCT productBrand FROM tblproducts;";
                         $result = mysqli_query($conn, $sql);
@@ -38,6 +39,16 @@ else{
                           echo '<option value='.$row['productBrand'].'>'.$row['productBrand'].'</option>';
                         }
                         ?>
+                        <script>
+                        var usedNames = {};
+                        $("datalist[id='brands'] > option").each(function () {
+                            if(usedNames[this.text]) {
+                                $(this).remove();
+                            } else {
+                                usedNames[this.text] = this.value;
+                            }
+                        });
+                        </script>
                      </datalist>
     							</div>
   							</div>
