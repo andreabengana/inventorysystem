@@ -11,12 +11,11 @@ font-family: 'Numans', sans-serif;
 }
 .card{
 	border-radius: 10px;
-	margin-left: 20px;
 	color: white;
 }
 .card-header{
 	border: none!important;
 }
 .table{
-	margin-top: 50px;
+	margin-top: 50px;	
 }
