@@ -37,7 +37,7 @@ else{
   			<div class="card-header text-center">EcoTower, BGC</div>
   			<div class="card-body">
     		<h5 class="card-title">Total Assets: </h5>
-    		<p class="card-text"></p>
+    		<p class="card-text"> <?php echo $ecotowerassets ?></p>
   			</div>
   		</div>
 		</div>

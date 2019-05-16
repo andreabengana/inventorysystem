@@ -5,6 +5,7 @@ if(!isset($_SESSION['userUid'])){
   header("Location: login.php");
 }
 else{
+  require 'includes/db.inc.php';
   require 'includes/navbar.inc.php';
 }
 ?>
@@ -30,6 +31,13 @@ else{
                         <option value="Samsung">
                         <option value="Apple">
                         <option value="Logitech">
+                        <?php
+                        $sql = "SELECT DISTINCT productBrand FROM tblproducts;";
+                        $result = mysqli_query($conn, $sql);
+                        while ($row = mysqli_fetch_assoc($result)) {
+                          echo '<option value='.$row['productBrand'].'>'.$row['productBrand'].'</option>';
+                        }
+                        ?>
                      </datalist>
     							</div>
   							</div>
