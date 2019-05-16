@@ -17,3 +17,6 @@ font-family: 'Numans', sans-serif;
 .card-header{
 	border: none!important;
 }
+.table{
+	margin-top: 50px;
+}
