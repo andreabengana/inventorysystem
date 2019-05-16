@@ -47,14 +47,6 @@ else{
                         <option> IT </option>
                       </select>
                   </div>
-									<div class="form-group col-md-6">
-  										<label for="password1"> Password </label>
-  										<input type="password" name="password1" id="password1" class="form-control">
-									</div>
-									<div class="form-group col-md-6">
-  										<label for="password2"> Repeat Password </label>
-  										<input type="password" name="password2" id="password2" class="form-control">
-									</div>
   							</div>
  								<button type="submit" class="btn btn-lg btn-success mx-auto d-block" name="addstaffbtn">Add User</button>
 						</form>
