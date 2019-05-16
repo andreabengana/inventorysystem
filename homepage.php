@@ -26,7 +26,8 @@ else{
 		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
   			<div class="card-header text-center">Cybergate, Boni</div>
   			<div class="card-body">
-    		<h5 class="card-title">Total Assets: </h5>
+    		<h5 class="card-title">Total Assets: </h5> 
+    			<h1 class="text-center"><?php echo $cybergateassets ?></h1>
     		<p class="card-text"></p>
   			</div>
   		</div>

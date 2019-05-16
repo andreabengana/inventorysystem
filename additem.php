@@ -64,6 +64,16 @@ else{
       								<input type="text" class="form-control"  placeholder="-Number of Product received-" name="stocks">
     							</div>
   							</div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label> Dispatch to which branch? </label>
+                    <select class="form-control" name="branch">
+                        <option value="Cybergate">Cybergate, Mandaluyong</option>
+                        <option value="EcoTower">EcoTower, BGC</option>
+                        <option value="Wynsum">Wynsum, Ortigas</option>
+                    </select>
+                  </div>
+                </div>
  								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
 						</form>
 			</div>

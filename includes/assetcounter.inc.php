@@ -12,4 +12,15 @@ else{
 	$wynsumassets = $row['total_sum'];
 
 	//Cybergate Counter
+	$sql = "SELECT SUM(productQuantity) AS total_sum FROM tblProducts WHERE productBranch = 'Cybergate';";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$cybergateassets = $row['total_sum'];
+
+	//Ecotower Counter
+	$sql = "SELECT SUM(productQuantity) AS total_sum FROM tblProducts WHERE productBranch = 'EcoTower';";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$ecotowerassets = $row['total_sum'];
+
 }		

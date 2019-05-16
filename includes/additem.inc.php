@@ -10,10 +10,10 @@ if(isset($_POST['additembtn'])){
 	$code2 = $_POST['code2'];
 	$producttype = $_POST['producttype'];
 	$stocks = $_POST['stocks'];
-
+	$branch = $_POST['branch'];
 		
 
-if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($stocks)){
+if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($stocks) || empty($branch)){
 	header("Location: ../additem.php?error=empty");
 	exit();
 }
@@ -22,9 +22,9 @@ elseif($code1 !== $code2){
 	exit();
 }
 else{
-			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productQuantity) 
+			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productQuantity, productBranch) 
 			VALUES 
-			('$companyname', '$brand', '$code1', '$producttype', '$stocks');";
+			('$companyname', '$brand', '$code1', '$producttype', '$stocks', '$branch');";
 			
 			mysqli_query($conn, $sql);
 			header("Location: ../additem.php?itemadded");
