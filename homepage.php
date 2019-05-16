@@ -28,7 +28,6 @@ else{
   			<div class="card-body">
     		<h5 class="card-title">Total Assets: </h5> 
     			<h1 class="text-center"><?php echo $cybergateassets ?></h1>
-    		<p class="card-text"></p>
   			</div>
   		</div>
 		</div>
@@ -37,7 +36,7 @@ else{
   			<div class="card-header text-center">EcoTower, BGC</div>
   			<div class="card-body">
     		<h5 class="card-title">Total Assets: </h5>
-    		<p class="card-text"> <?php echo $ecotowerassets ?></p>
+    		<h1 class="text-center"> <?php echo $ecotowerassets ?></h1>
   			</div>
   		</div>
 		</div>
