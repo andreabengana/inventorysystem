@@ -23,4 +23,9 @@ else{
 	$row = mysqli_fetch_assoc($result);
 	$ecotowerassets = $row['total_sum'];
 
+	//Total Counter
+	$sql = "SELECT SUM(productQuantity) AS total_sum FROM tblProducts;";
+	$result = mysqli_query($conn, $sql);
+	$row = mysqli_fetch_assoc($result);
+	$andersonassets = $row['total_sum'];	
 }		
