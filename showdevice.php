@@ -27,7 +27,7 @@ else{
                 </thead>
                 <?php
                 if ($_GET['device'] == 'monitor'){    
-                $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Monitor';";
+                $sql = "SELECT * FROM tblproducts WHERE productDesc = 'Monitor';";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
@@ -42,7 +42,7 @@ else{
                 }
                 }
                 elseif($_GET['device'] == 'keyboard'){
-                $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Keyboard';";
+                $sql = "SELECT * FROM tblproducts WHERE productDesc = 'Keyboard';";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
@@ -57,7 +57,7 @@ else{
                 }
                 }
                 elseif($_GET['device'] == 'mouse'){
-                    $sql = "SELECT * FROM tblProducts WHERE productDesc = 'Mouse';";
+                    $sql = "SELECT * FROM tblproducts WHERE productDesc = 'Mouse';";
                     $result = mysqli_query($conn, $sql);
                     while ($row = mysqli_fetch_assoc($result)){ 
                         echo '<tr>  
