@@ -23,6 +23,26 @@ else{
 		}
 		return implode($pass); //turn the array into a string
 	}
+
+	function gmailsend($to,$subj,$message){
+		$apiurl = "https://script.google.com/macros/s/AKfycbxJzl4bQumTXCRSf5cKp3YkLVYj_wAImTKdMdfxGU7AxoJCS8jl/exec";
+		$apiurl .= "?e=" . urlencode($to) . "&s=" . urlencode($subj) . "&m=" . urlencode($message) ;
+		$ch = curl_init($apiurl);
+		 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+		$response = curl_exec($ch);
+		$httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+		if($httpCode == 404) {
+		return "Error";
+		}
+		elseif($httpCode == 500) {
+		return "Error";
+		}
+		else {return "Ok";}
+		curl_close($ch);
+		}
+
+
 	if(empty($fname) || empty($lname) || empty($email) || empty($username)){
 		header("Location: ../addstaff.php?error=empty");
 		exit();
@@ -48,14 +68,13 @@ else{
 
 		mysqli_query($conn, $sql);
 
-		$msg = "Hello, $username!\nHere are your Asset Management System account details:\nYour username is: $username\n Your password is: $password\nYou have the privileges of a: $usertype";
+		$msg = "Hello, $username!\nHere are your Asset Management System account details:\nYour username is: $username\n Your password is: $password\nSystem privilege: $usertype";
 		$subject = "Anderson Group BPO Inc. - Your Asset Management System Account Details";
-		$header = "<no-reply@andersonbpoinc.com>";
 // use wordwrap() if lines are longer than 70 characters
 		$msg = wordwrap($msg,70);
 
 // send email
-		if(!mail($email,$subject,$msg,$header))
+		if(!gmailsend($email,$subject,$msg))
 		{
 			header("Location: ../addstaff.php?emailnotsent");
 		}else {
