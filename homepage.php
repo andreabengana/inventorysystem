@@ -15,7 +15,7 @@ else{
 		<div class="row">
 		<div class="col-lg-3">
 		<div class="card bg-primary mb-3" style="max-width: 18rem;">
-  			<i class="fa fa-building-o fa-3x mx-auto d-block" aria-hidden="true" style="margin-top: 20px;"></i><div class="card-header text-center">Wynsum, Ortigas</div>
+  			<i class="fa fa-map-pin fa-3x mx-auto d-block" aria-hidden="true" style="margin-top: 20px;"></i><div class="card-header text-center">Wynsum, Ortigas</div>
   			<div class="card-body">
     		<h5 class="card-title text-center">Total Available Assets: </h5>
     		<h1 class="text-center"> <?php echo $wynsumassets?> </h1>
@@ -24,7 +24,7 @@ else{
 		</div>
 		<div class="col-lg-3">
 		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  			<div class="card-header text-center">Cybergate, Boni</div>
+		<i class="fa fa-map-pin fa-3x mx-auto d-block" aria-hidden="true" style="margin-top: 20px;"></i><div class="card-header text-center">Cybergate, Boni</div>
   			<div class="card-body">
     		<h5 class="card-title text-center">Total Available Assets: </h5> 
     		<h1 class="text-center"><?php echo $cybergateassets?></h1>
@@ -33,7 +33,7 @@ else{
 		</div>
 		<div class="col-lg-3">
 		<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
-  			<div class="card-header text-center">EcoTower, BGC</div>
+		<i class="fa fa-map-pin fa-3x mx-auto d-block" aria-hidden="true" style="margin-top: 20px;"></i><div class="card-header text-center">EcoTower, BGC</div>
   			<div class="card-body">
     		<h5 class="card-title text-center">Total Available Assets: </h5>
     		<h1 class="text-center"> <?php echo $ecotowerassets?></h1>
@@ -42,7 +42,7 @@ else{
 		</div>
     <div class="col-lg-3">
     <div class="card text-white bg-success mb-3" style="max-width: 18rem;">
-        <div class="card-header text-center">Anderson Group</div>
+        <i class="fa fa-building-o fa-3x mx-auto d-block" aria-hidden="true" style="margin-top: 20px;"></i><div class="card-header text-center">Anderson Group</div>
         <div class="card-body">
         <h5 class="card-title text-center">Total Available Assets: </h5>
         <h1 class="text-center"> <?php echo $andersonassets?></h1>
