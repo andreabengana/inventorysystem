@@ -11,7 +11,6 @@ if(isset($_POST['additembtn'])){
 	$producttype = $_POST['producttype'];
 	$count = $_POST['stocks'];
 	$branch = $_POST['branch'];
-	$number = 0;
 		
 
 if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($branch)){
@@ -24,21 +23,20 @@ elseif($code1 !== $code2){
 }
 else{
 		if($branch == 'Wynsum'){
+			$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
+			$result = mysqli_query($conn, $sql);
+			$row = mysqli_fetch_assoc($result);
+			$tagExplode = explode("-", $row['productTag']);
+			$serialNum = (int)$tagExplode[3];
 			for($i=0; $i < $count; $i++) {
 			
-			$code = "AGBI-FF-01-".str_pad($number+=1, 4, "0", STR_PAD_LEFT)."-W";
+			$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-W";
 			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
 			VALUES 
 			('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
 			mysqli_query($conn, $sql);
 		}
 		header("Location: ../additem.php?itemadded");
-		}
-		elseif(){
-
-		}
-		elseif(){
-
 		}
 		}
 	}	
