@@ -38,6 +38,7 @@ else{
 		}
 		header("Location: ../additem.php?itemadded");
 		}
+		
 		}
 	}	
 else{
