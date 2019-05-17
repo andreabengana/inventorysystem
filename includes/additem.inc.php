@@ -64,17 +64,6 @@ else{
 				mysqli_query($conn, $sql);
 			}
 		}
-
-		// $tagExplode = explode("-", $row['productTag']);
-		// $serialNum = (int)$tagExplode[3];
-		// for($i=0; $i < $count; $i++) {
-			
-		// 	$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
-		// 	$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
-		// 	VALUES 
-		// 	('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
-		// 	mysqli_query($conn, $sql);
-		// }
 		header("Location: ../additem.php?itemadded");
 	}
 	elseif ($branch == 'EcoTower') {
@@ -103,17 +92,6 @@ else{
 				mysqli_query($conn, $sql);
 			}
 		}
-
-		// $tagExplode = explode("-", $row['productTag']);
-		// $serialNum = (int)$tagExplode[3];
-		// for($i=0; $i < $count; $i++) {
-			
-		// 	$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
-		// 	$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
-		// 	VALUES 
-		// 	('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
-		// 	mysqli_query($conn, $sql);
-		// }
 		header("Location: ../additem.php?itemadded");
 	}
 }
@@ -122,8 +100,5 @@ else{
 	header("Location: login.php");
 }
 mysqli_close($conn);
-
-
-
 
 ?>
