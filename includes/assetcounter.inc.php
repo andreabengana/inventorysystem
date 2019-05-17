@@ -14,18 +14,15 @@ else{
 	//Cybergate Counter
 	$sql = "SELECT * FROM tblProducts WHERE productBranch = 'Cybergate';";
 	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
 	$cybergateassets = mysqli_num_rows($result);
 
 	//Ecotower Counter
 	$sql = "SELECT * FROM tblProducts WHERE productBranch = 'EcoTower';";
 	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
 	$ecotowerassets = mysqli_num_rows($result);
 
 	//Total Counter
 	$sql = "SELECT * FROM tblProducts;";
 	$result = mysqli_query($conn, $sql);
-	$row = mysqli_fetch_assoc($result);
 	$andersonassets = mysqli_num_rows($result);
 }		

@@ -51,23 +51,38 @@ else{
     </div>
 
 	</div>
-    <table class="table table-borderless table-primary table-striped table-earning" id="cybergate">
-      <thead>
-        <tr>
-          <th class="text-center"> Supplier </th>
-          <th class="text-center"> Asset Brand </th>
-          <th class="text-center"> Asset Model </th>
-          <th class="text-center"> Asset Type</th>
-          <th class="text-center"> Asset Quantity</th>
-          <th class="text-center"> Branch</th>
-          <th class="text-center"> Date Accepted</th>
-        </tr>
-      <thead>
-        <tbody>
-        <tr></tr>
-        </tbody>
+<div class="table-responsive">  
+            <table id="employee_data" class="table table-bordered text-center">  
+                <thead class="table-primary">  
+                    <tr>  
+                        <td>Product ID</td>  
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Asset tag</td>
+                        <td>Branch</td>
+                        <td>Date Received </td>  
+                    </tr>  
+                </thead>
+          <?php 
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum';";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productID"].'</td>  
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productTag"].'</td>   
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dateAccepted"].'</td>
+                    </tr>';
+                }
+                ?>
     </table>
-
+</div>
 
 	</div>
 
