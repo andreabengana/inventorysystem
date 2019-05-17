@@ -22,13 +22,13 @@ elseif($code1 !== $code2){
 	exit();
 }
 else{
-		if($branch == 'Wynsum'){
-			$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
-			$result = mysqli_query($conn, $sql);
-			$row = mysqli_fetch_assoc($result);
-			$tagExplode = explode("-", $row['productTag']);
-			$serialNum = (int)$tagExplode[3];
-			for($i=0; $i < $count; $i++) {
+	if($branch == 'Wynsum'){
+		$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		$tagExplode = explode("-", $row['productTag']);
+		$serialNum = (int)$tagExplode[3];
+		for($i=0; $i < $count; $i++) {
 			
 			$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-W";
 			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
@@ -37,10 +37,87 @@ else{
 			mysqli_query($conn, $sql);
 		}
 		header("Location: ../additem.php?itemadded");
+	}
+	elseif ($branch == 'Cybergate') {
+		$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		if(empty($row['productTag'])){
+			$serialNum = 0000;
+			for($i=0; $i < $count; $i++) {
+			
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				VALUES 
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				mysqli_query($conn, $sql);
+			}
+		} else{
+			$tagExplode = explode("-", $row['productTag']);
+			$serialNum = (int)$tagExplode[3];
+			for($i=0; $i < $count; $i++) {
+			
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				VALUES 
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				mysqli_query($conn, $sql);
+			}
 		}
-		
+
+		// $tagExplode = explode("-", $row['productTag']);
+		// $serialNum = (int)$tagExplode[3];
+		// for($i=0; $i < $count; $i++) {
+			
+		// 	$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
+		// 	$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+		// 	VALUES 
+		// 	('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+		// 	mysqli_query($conn, $sql);
+		// }
+		header("Location: ../additem.php?itemadded");
+	}
+	elseif ($branch == 'EcoTower') {
+		$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
+		$result = mysqli_query($conn, $sql);
+		$row = mysqli_fetch_assoc($result);
+		if(empty($row['productTag'])){
+			$serialNum = 0000;
+			for($i=0; $i < $count; $i++) {
+			
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				VALUES 
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				mysqli_query($conn, $sql);
+			}
+		} else{
+			$tagExplode = explode("-", $row['productTag']);
+			$serialNum = (int)$tagExplode[3];
+			for($i=0; $i < $count; $i++) {
+			
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				VALUES 
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				mysqli_query($conn, $sql);
+			}
 		}
-	}	
+
+		// $tagExplode = explode("-", $row['productTag']);
+		// $serialNum = (int)$tagExplode[3];
+		// for($i=0; $i < $count; $i++) {
+			
+		// 	$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
+		// 	$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+		// 	VALUES 
+		// 	('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+		// 	mysqli_query($conn, $sql);
+		// }
+		header("Location: ../additem.php?itemadded");
+	}
+}
+}	
 else{
 	header("Location: login.php");
 }
