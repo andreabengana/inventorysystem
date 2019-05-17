@@ -51,8 +51,8 @@ else{
     </div>
 
 	</div>
-<div class="table-responsive">  
-            <table id="employee_data" class="table table-bordered text-center">  
+<div class="table-responsive">
+            <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
                 <thead class="table-primary">  
                     <tr>  
                         <td>Product ID</td>  

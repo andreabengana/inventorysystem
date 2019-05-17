@@ -22,7 +22,7 @@ elseif($code1 !== $code2){
 	exit();
 }
 else{
-	if($branch == 'Wynsum'){
+	if($branch == 	'Wynsum'){
 		$sql = "SELECT productTag FROM tblproducts WHERE productBranch = '$branch' ORDER BY productID  DESC LIMIT 1";
 		$result = mysqli_query($conn, $sql);
 		$row = mysqli_fetch_assoc($result);
