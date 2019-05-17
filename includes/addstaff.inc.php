@@ -68,7 +68,7 @@ else{
 
 		mysqli_query($conn, $sql);
 
-		$msg = "Hello, $fname $lname!\nHere are your Asset Management System account details:\nYour username is: $username\n Your password is: $password\nSystem privilege: $usertype";
+		$msg = "Hello, $fname $lname!\nHere are your Asset Management System account details:\nYour username is: $username\nYour password is: $password\nSystem privilege: $usertype";
 		$subject = "Anderson Group BPO Inc. - Your Asset Management System Account Details";
 // use wordwrap() if lines are longer than 70 characters
 		$msg = wordwrap($msg,70);
