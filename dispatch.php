@@ -4,7 +4,6 @@ session_start();
 if(!isset($_SESSION['userUid'])){
 	header("Location: login.php");
 }
-
 	require 'includes/db.inc.php';
 	require 'includes/navbar.inc.php';
 
@@ -64,7 +63,7 @@ if(!isset($_SESSION['userUid'])){
 											</select>
 									</div>
 									<div class="form-group col-md-6 mx-auto d-block">
-										<label>Dispatch to?</label>
+										<label>Issued to?</label>
 												<input type="text" class="form-control" name="department" placeholder="-Department Name-">  
                 	</div>
                 </div>
@@ -78,8 +77,8 @@ if(!isset($_SESSION['userUid'])){
   									<input type="text" name="employeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
   							  </div>
     							<div class="form-group col-md-6">
-      								<label for="dispatchToWorkstation">Workstation</label>
-      								<input type="text" class="form-control"  placeholder="Workstation Code" name="workstation">
+      								<label for="Workstation">Workstation</label>
+      								<input type="text" class="form-control"  placeholder="Workstation Code" name="dispatchToWorkstation">
     							</div>
                 </div>
  								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Asset</button>
