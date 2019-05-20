@@ -54,16 +54,36 @@ if(!isset($_SESSION['userUid'])){
       								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="quantity">
     							</div>
                 </div>
-                <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
+								<div class="form-row" id="row3">
+									<div class="form-group col-md-6">
+											<label> Branch Assigned </label>
+											<select class="form-control" name="branch">
+													<option value="Cybergate">Cybergate, Mandaluyong</option>
+													<option value="EcoTower">EcoTower, BGC</option>
+													<option value="Wynsum">Wynsum, Ortigas</option>
+											</select>
+									</div>
+									<div class="form-group col-md-6 mx-auto d-block">
+										<label>Dispatch to?</label>
+												<input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                	</div>
+                </div>
+                <!-- <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
                   <label>Dispatch to?</label>
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div> -->
+								<div class="form-row" id="row4">
+  								<div class="form-group col-md-6 mx-auto d-block">
+  									<label for="dispatchToEmployee">Assign To Employee</label>
+  									<input type="text" name="employeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
+  							  </div>
+    							<div class="form-group col-md-6">
+      								<label for="dispatchToWorkstation">Workstation</label>
+      								<input type="text" class="form-control"  placeholder="Workstation Code" name="workstation">
+    							</div>
                 </div>
  								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Asset</button>
-                 <?php
-                if ($_GET['error'] == 'empty') {
-                  echo '<p style="color: red;"> Please fill up all fields! </p>';
-                }
-                ?>
+                
 						</form>
 			</div>
 		</div>

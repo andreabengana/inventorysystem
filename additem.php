@@ -85,7 +85,7 @@ else{
   							</div>
                 <div class="form-row">
                   <div class="form-group col-md-6">
-                    <label> Dispatch to which branch? </label>
+                    <label> Assign to which branch? </label>
                     <select class="form-control" name="branch">
                         <option value="Cybergate">Cybergate, Mandaluyong</option>
                         <option value="EcoTower">EcoTower, BGC</option>
