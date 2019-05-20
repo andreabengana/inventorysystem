@@ -66,7 +66,7 @@ else{
                     </tr>  
                 </thead>
           <?php 
-                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum';";
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum' AND productStatus = 'Available';";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
