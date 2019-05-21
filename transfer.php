@@ -52,16 +52,66 @@ else{
       								<input type="text" class="form-control"  placeholder="-Number of Products dispatched-" name="stocks">
     							</div>
                 </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                  <label>Transfer from?</label>
-                      <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+								<label for="row3"><h3>Existing Dispatch Details</h3></label>
+                <div class="form-row" id="row3">
+									<div class="form-group col-md-6">
+											<label> Branch Assigned </label>
+											<select class="form-control" name="branch">
+													<option value="Cybergate">Cybergate, Mandaluyong</option>
+													<option value="EcoTower">EcoTower, BGC</option>
+													<option value="Wynsum">Wynsum, Ortigas</option>
+											</select>
+									</div>
+									<div class="form-group col-md-6 mx-auto d-block">
+										<label>Issued to?</label>
+												<input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                	</div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label>Transfer to?</label>
+                <!-- <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
+                  <label>Dispatch to?</label>
                       <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div> -->
+								<div class="form-row" id="row4">
+  								<div class="form-group col-md-6 mx-auto d-block">
+  									<label for="dispatchToEmployee">Assign To Employee</label>
+  									<input type="text" name="employeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
+  							  </div>
+    							<div class="form-group col-md-6">
+      								<label for="Workstation">Workstation</label>
+      								<input type="text" class="form-control"  placeholder="Workstation Code" name="dispatchToWorkstation">
+    							</div>
                 </div>
-              </div>
+
+								<label for="row3"><h3>Transfer Details</h3></label>
+                <div class="form-row" id="row3">
+									<div class="form-group col-md-6">
+											<label> Branch Assigned </label>
+											<select class="form-control" name="branch">
+													<option value="Cybergate">Cybergate, Mandaluyong</option>
+													<option value="EcoTower">EcoTower, BGC</option>
+													<option value="Wynsum">Wynsum, Ortigas</option>
+											</select>
+									</div>
+									<div class="form-group col-md-6 mx-auto d-block">
+										<label>Issued to?</label>
+												<input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                	</div>
+                </div>
+                <!-- <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
+                  <label>Dispatch to?</label>
+                      <input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+                </div> -->
+								<div class="form-row" id="row4">
+  								<div class="form-group col-md-6 mx-auto d-block">
+  									<label for="dispatchToEmployee">Assign To Employee</label>
+  									<input type="text" name="employeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
+  							  </div>
+    							<div class="form-group col-md-6">
+      								<label for="Workstation">Workstation</label>
+      								<input type="text" class="form-control"  placeholder="Workstation Code" name="dispatchToWorkstation">
+    							</div>
+                </div>
+ 								
  								<button type="submit" class="btn btn-lg btn-success" name="transferbtn">Transfer Asset</button>
 						</form>
 			</div>
