@@ -11,7 +11,7 @@ if(isset($_POST['additembtn'])){
 	$producttype = $_POST['producttype'];
 	$count = $_POST['stocks'];
 	$branch = $_POST['branch'];
-		
+	$status = "Available";	
 
 if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($branch)){
 	header("Location: ../additem.php?error=empty");
@@ -58,9 +58,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-R";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
 				mysqli_query($conn, $sql);
 			}
 		}
@@ -75,9 +75,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
 				mysqli_query($conn, $sql);
 			}
 		} else{
@@ -86,9 +86,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
 				mysqli_query($conn, $sql);
 			}
 		}
