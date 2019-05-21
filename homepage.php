@@ -53,9 +53,70 @@ else{
 	</div>
 <div class="table-responsive">
             <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">List of Available Stocks at Wynsum, Ortigas Branch</caption>
                 <thead class="table-primary">  
                     <tr>  
-                        <td>Product ID</td>  
+                        <td>Asset Tag</td>
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Branch</td>
+                        <td>Date Received </td>  
+                    </tr>  
+                </thead>
+          <?php 
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum' AND productStatus = 'Available';";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productTag"].'</td>   
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dateAccepted"].'</td>
+                    </tr>';
+                }
+                ?>
+    </table>
+
+    <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+                <thead class="table-primary"> 
+                <caption style="caption-side:top;">List of Available Stocks at Cybergate, Boni</caption> 
+                    <tr>  
+                        <td>Asset Tag</td>
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Branch</td>
+                        <td>Date Received </td>  
+                    </tr>  
+                </thead>
+          <?php 
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Cybergate' AND productStatus = 'Available';";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productTag"].'</td>   
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dateAccepted"].'</td>
+                    </tr>';
+                }
+                ?>
+    </table>
+
+    <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+                <thead class="table-primary"> 
+                <caption style="caption-side:top;">List of Available Stocks at EcoTower, BGC</caption> 
+                    <tr>  
+                        <td>Asset Tag</td>
                         <td>Company Code</td>  
                         <td>Brand</td>  
                         <td>Model</td>  
@@ -66,16 +127,15 @@ else{
                     </tr>  
                 </thead>
           <?php 
-                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum' AND productStatus = 'Available';";
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'EcoTower' AND productStatus = 'Available';";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
-                        <td>'.$row["productID"].'</td>  
+                        <td>'.$row["productTag"].'</td>   
                         <td>'.$row["productCompanyCode"].'</td>  
                         <td>'.$row["productBrand"].'</td>  
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>
-                        <td>'.$row["productTag"].'</td>   
                         <td>'.$row["productBranch"].'</td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
