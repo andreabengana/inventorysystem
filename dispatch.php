@@ -6,6 +6,7 @@ if(!isset($_SESSION['userUid'])){
 }
 	require 'includes/db.inc.php';
 	require 'includes/navbar.inc.php';
+	require 'includes/assetcounter.inc.php';
 
 ?>
 <head>
@@ -84,7 +85,204 @@ if(!isset($_SESSION['userUid'])){
  								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Asset</button>
                 
 						</form>
+
+			
 			</div>
+		</div>
+    <div class="table-responsive" style="color:black;">
+            <table id="employee_data_wynsum" class="table table-bordered text-center table-striped table-earning" href="#wynsumtable">  
+            <caption style="caption-side:top;" id="wynsumtable">List of Dispatched Items at Wynsum, Ortigas Branch</caption>
+                <thead class="table-primary">  
+                    <tr>  
+                        <!--<td>Product ID</td> --> 
+                        <td>Asset Tag</td>
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Branch</td>
+                        <td>Assigned Department</td>
+												<td>Assigned Employee</td>
+												<td>Assigned Workstation</td>
+												<td>Status</td>
+                        <td>Dispatch Date</td>  
+                    </tr>  
+                </thead>
+          <?php 
+
+//check if the starting row variable was passed in the URL or not
+      if (!isset($_GET['startrow']) or !is_numeric($_GET['startrow'])) {
+  //we give the value of the starting row to 0 because nothing was found in URL
+        $startrow = 0;
+//otherwise we take the value from the URL
+      } else {
+          $startrow = (int)$_GET['startrow'];
+          }
+                $sql = "SELECT tblproducts.productTag, tblproducts.productCompanyCode, tblproducts.productBrand, tblproducts.productModel, tblproducts.productDesc, tblproducts.productBranch, tbldispatch.dispatchToDepartment, tblproducts.employeeAssigned, tblproducts.workstationAssigned, tblproducts.productStatus, tbldispatch.dispatchDate 
+                FROM tblproducts
+                INNER JOIN tbldispatch
+                   ON tblproducts.productID = tbldispatch.productID
+                WHERE productBranch='Wynsum' AND productStatus = 'Dispatched'
+                ORDER BY tbldispatch.dispatchID
+                LIMIT $startrow,10";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productTag"].'</td>  
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dispatchToDepartment"].'</td>
+												<td>'.$row["employeeAssigned"].'</td>
+												<td>'.$row["workstationAssigned"].'</td>
+												<td>'.$row["productStatus"].'</td>
+                        <td>'.$row["dispatchDate"].'</td>
+                    </tr>
+                    ';
+                }
+              //now this is the link..
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow='.($startrow+10).'#wynsumtable">
+            <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+
+            $prev = $startrow - 10;
+
+            //only print a "Previous" link if a "Next" was clicked
+            if ($prev >= 0)
+            echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow='.$prev.'#wynsumtable">
+            <button class="btn btn-lg btn-primary">Prev</button></a>';
+              ?>
+            
+    </table>
+		<table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;" id="cybergatetable">List of Dispatched Items at Cybergate, Boni Branch</caption>
+                <thead class="table-primary">  
+                    <tr>  
+                        <!--<td>Product ID</td> -->  
+                        <td>Asset Tag</td>
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Branch</td>
+                        <td>Assigned Department</td>
+												<td>Assigned Employee</td>
+												<td>Assigned Workstation</td>
+												<td>Status</td>
+                        <td>Dispatch Date</td>  
+                    </tr>  
+                </thead>
+          <?php 
+          //check if the starting row variable was passed in the URL or not
+        if (!isset($_GET['startrow2']) or !is_numeric($_GET['startrow2'])) {
+        //we give the value of the starting row to 0 because nothing was found in URL
+        $startrow2 = 0;
+        //otherwise we take the value from the URL
+        } else {
+        $startrow2 = (int)$_GET['startrow2'];
+        }
+                $sql = "SELECT tblproducts.productTag, tblproducts.productCompanyCode, tblproducts.productBrand, tblproducts.productModel, tblproducts.productDesc, tblproducts.productBranch, tbldispatch.dispatchToDepartment, tblproducts.employeeAssigned, tblproducts.workstationAssigned, tblproducts.productStatus, tbldispatch.dispatchDate 
+                FROM tblproducts
+                INNER JOIN tbldispatch
+                   ON tblproducts.productID = tbldispatch.productID
+                WHERE productBranch='Cybergate' AND productStatus = 'Dispatched'
+                ORDER BY tbldispatch.dispatchID
+                LIMIT $startrow2,10";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                         <td>'.$row["productTag"].'</td>   
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dispatchToDepartment"].'</td>
+												<td>'.$row["employeeAssigned"].'</td>
+												<td>'.$row["workstationAssigned"].'</td>
+												<td>'.$row["productStatus"].'</td>
+                        <td>'.$row["dispatchDate"].'</td>
+                    </tr>';
+                }
+                //now this is the link..
+                echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow2='.($startrow2+10).'#cybergatetable">
+                <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+
+                $prev = $startrow2 - 10;
+
+                //only print a "Previous" link if a "Next" was clicked
+                if ($prev >= 0)
+                echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow2='.$prev.'#cybergatetable">
+                <button class="btn btn-lg btn-primary">Prev</button></a>';
+
+                ?>
+    </table>
+
+		<table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">List of Dispatched Items at EcoTower, BGC Branch</caption>
+                <thead class="table-primary">  
+                    <tr>  
+                        <!--<td>Product ID</td> -->  
+                        <td>Asset Tag</td>
+                        <td>Company Code</td>  
+                        <td>Brand</td>  
+                        <td>Model</td>  
+                        <td>Description</td>  
+                        <td>Branch</td>
+                        <td>Assigned Department</td>
+												<td>Assigned Employee</td>
+												<td>Assigned Workstation</td>
+												<td>Status</td>
+                        <td>Dispatch Date</td>  
+                    </tr>  
+                </thead>
+          <?php 
+                 //check if the starting row variable was passed in the URL or not
+      if (!isset($_GET['startrow3']) or !is_numeric($_GET['startrow3'])) {
+  //we give the value of the starting row to 0 because nothing was found in URL
+      $startrow3 = 0;
+  //otherwise we take the value from the URL
+        } else {
+            $startrow3 = (int)$_GET['startrow3'];
+          }
+                $sql = "SELECT tblproducts.productTag, tblproducts.productCompanyCode, tblproducts.productBrand, tblproducts.productModel, tblproducts.productDesc, tblproducts.productBranch, tbldispatch.dispatchToDepartment, tblproducts.employeeAssigned, tblproducts.workstationAssigned, tblproducts.productStatus, tbldispatch.dispatchDate 
+                FROM tblproducts
+                  INNER JOIN tbldispatch
+                      ON tblproducts.productID = tbldispatch.productID
+                  WHERE productBranch='EcoTower' AND productStatus = 'Dispatched'
+                ORDER BY tbldispatch.dispatchID
+                LIMIT $startrow3,10";
+                $result = mysqli_query($conn, $sql);
+                while ($row = mysqli_fetch_assoc($result)){ 
+                    echo '<tr>  
+                        <td>'.$row["productTag"].'</td>   
+                        <td>'.$row["productCompanyCode"].'</td>  
+                        <td>'.$row["productBrand"].'</td>  
+                        <td>'.$row["productModel"].'</td>  
+                        <td>'.$row["productDesc"].'</td>
+                        <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["dispatchToDepartment"].'</td>
+												<td>'.$row["employeeAssigned"].'</td>
+												<td>'.$row["workstationAssigned"].'</td>
+												<td>'.$row["productStatus"].'</td>
+                        <td>'.$row["dispatchDate"].'</td>
+                    </tr>';
+                }
+               //now this is the link..
+               echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow3='.($startrow3+10).'#cybergatetable">
+               <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+               
+               $prev = $startrow3 - 10;
+               
+               //only print a "Previous" link if a "Next" was clicked
+               if ($prev >= 0)
+                   echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow3='.$prev.'#cybergatetable">
+                   <button class="btn btn-lg btn-primary">Prev</button></a>';
+                
+                ?>
+    </table>
+
 		</div>
 </body>
 </html>
