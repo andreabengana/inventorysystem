@@ -55,6 +55,8 @@ if(isset($_SESSION['userUid'])){
 						</div>
 						<input type="password" class="form-control inputfield" placeholder="Password" name="password">
 					</div>
+
+					
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
 					</div>
