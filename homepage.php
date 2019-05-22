@@ -57,12 +57,12 @@ else{
                 <thead class="table-primary">  
                     <tr>  
                         <td>Asset Tag</td>
-                        <td>Company Code</td>  
+                        <td>Supplier</td>  
                         <td>Brand</td>  
-                        <td>Model</td>  
+                        <td>Model/Serial Number</td>  
                         <td>Description</td>  
                         <td>Branch</td>
-                        <td>Date Received </td>  
+                        <td>Date Purchaseds</td>  
                     </tr>  
                 </thead>
           <?php 
