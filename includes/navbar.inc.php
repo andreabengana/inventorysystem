@@ -39,7 +39,11 @@ if (!isset($_SESSION['userUid'])) {
           		<?php echo "Welcome, ".$_SESSION['fname']?>
         		</a>
         			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-         		 		<a class="dropdown-item text-center" href= "addstaff.php">Add New User</a>
+        				<?php
+        				if($_SESSION['usertype'] == 'superadmin'){
+         		 		echo '<a class="dropdown-item text-center" href= "addstaff.php">Add New User</a>';
+         		 		}
+         		 		?>
           				<a class="dropdown-item text-center" href= "additem.php">Add New Asset</a>
           				<a class="dropdown-item text-center" href= "dispatch.php"> Dispatch Asset</a>
           				<a class="dropdown-item text-center" href= "transfer.php">Transfer Asset</a>
