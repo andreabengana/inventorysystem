@@ -66,7 +66,17 @@ else{
                     </tr>  
                 </thead>
           <?php 
-                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum' AND productStatus = 'Available';";
+
+          //check if the starting row variable was passed in the URL or not
+      if (!isset($_GET['startrow']) or !is_numeric($_GET['startrow'])) {
+        //we give the value of the starting row to 0 because nothing was found in URL
+              $startrow = 0;
+      //otherwise we take the value from the URL
+            } else {
+                $startrow = (int)$_GET['startrow'];
+                }
+
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Wynsum' AND productStatus = 'Available' LIMIT $startrow,10;";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
@@ -79,12 +89,22 @@ else{
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
+                  //now this is the link..
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow='.($startrow+10).'">
+              <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+  
+              $prev = $startrow - 10;
+  
+              //only print a "Previous" link if a "Next" was clicked
+              if ($prev >= 0)
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow='.$prev.'">
+              <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
 
     <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
                 <thead class="table-primary"> 
-                <caption style="caption-side:top;">List of Available Stocks at Cybergate, Boni</caption> 
+                <caption style="caption-side:top;" id="cybergatestocks">List of Available Stocks at Cybergate, Boni</caption> 
                     <tr>  
                         <td>Asset Tag</td>
                         <td>Company Code</td>  
@@ -96,7 +116,17 @@ else{
                     </tr>  
                 </thead>
           <?php 
-                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Cybergate' AND productStatus = 'Available';";
+
+            //check if the starting row variable was passed in the URL or not
+      if (!isset($_GET['startrow2']) or !is_numeric($_GET['startrow2'])) {
+        //we give the value of the starting row to 0 because nothing was found in URL
+              $startrow2 = 0;
+      //otherwise we take the value from the URL
+            } else {
+                $startrow2 = (int)$_GET['startrow2'];
+                }
+
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'Cybergate' AND productStatus = 'Available' LIMIT $startrow2,10;";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
@@ -109,25 +139,45 @@ else{
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
+
+                    //now this is the link..
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow2='.($startrow2+10).'#cybergatestocks">
+              <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+  
+              $prev = $startrow2 - 10;
+  
+              //only print a "Previous" link if a "Next" was clicked
+              if ($prev >= 0)
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow2='.$prev.'#cybergatestocks">
+              <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
 
     <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
                 <thead class="table-primary"> 
-                <caption style="caption-side:top;">List of Available Stocks at EcoTower, BGC</caption> 
+                <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
                     <tr>  
                         <td>Asset Tag</td>
                         <td>Company Code</td>  
                         <td>Brand</td>  
                         <td>Model</td>  
                         <td>Description</td>  
-                        <td>Asset tag</td>
                         <td>Branch</td>
                         <td>Date Received </td>  
                     </tr>  
                 </thead>
           <?php 
-                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'EcoTower' AND productStatus = 'Available';";
+
+             //check if the starting row variable was passed in the URL or not
+      if (!isset($_GET['startrow3']) or !is_numeric($_GET['startrow3'])) {
+        //we give the value of the starting row to 0 because nothing was found in URL
+              $startrow3 = 0;
+      //otherwise we take the value from the URL
+            } else {
+                $startrow3 = (int)$_GET['startrow3'];
+                }
+
+                $sql = "SELECT * FROM tblProducts WHERE productBranch = 'EcoTower' AND productStatus = 'Available' LIMIT $startrow3,10;";
                 $result = mysqli_query($conn, $sql);
                 while ($row = mysqli_fetch_assoc($result)){ 
                     echo '<tr>  
@@ -140,6 +190,16 @@ else{
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
+                      //now this is the link..
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow3='.($startrow3+10).'#ecotowerstocks">
+              <button class="btn btn-lg btn-primary pull-right">Next</button></a>';
+  
+              $prev = $startrow3 - 10;
+  
+              //only print a "Previous" link if a "Next" was clicked
+              if ($prev >= 0)
+              echo '<a href="'.$_SERVER['PHP_SELF'].'?startrow3='.$prev.'#ecotowerstocks">
+              <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
 </div>
