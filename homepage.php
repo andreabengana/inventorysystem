@@ -62,7 +62,8 @@ else{
                         <td>Model/Serial Number</td>  
                         <td>Description</td>  
                         <td>Branch</td>
-                        <td>Date Purchaseds</td>  
+                        <td>Date Purchased</td>
+                        <td>Date Received</td>  
                     </tr>  
                 </thead>
           <?php 
