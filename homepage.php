@@ -57,7 +57,7 @@ else{
                 <thead class="table-primary">  
                     <tr>  
                         <td>Asset Tag</td>
-                        <td>Supplier</td>  
+                        <td>Supplier Code</td>  
                         <td>Brand</td>  
                         <td>Model/Serial Number</td>  
                         <td>Description</td>  
@@ -87,6 +87,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>
                         <td>'.$row["productBranch"].'</td>
+                        <td></td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
@@ -103,21 +104,53 @@ else{
                 ?>
     </table>
 
-    <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
-                <thead class="table-primary"> 
-                <caption style="caption-side:top;" id="cybergatestocks">List of Available Stocks at Cybergate, Boni</caption> 
+
+ 
+<div class="table-responsive">
+            <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">Total Number of Available Stocks per Asset at Wynsum, Ortigas Branch</caption>
+                <thead class="table-primary">  
+                    <tr>
+                        <td>Mouse</td>  
+                        <td>Monitors</td>
+                        <td>Keyboards</td>  
+                        <td>AVR</td>  
+                        <td>CPU</td>  
+                        <td>Headphones</td>  
+                        <td>Chair</td>
+                        <td>Table</td> 
+                    </tr>  
+                </thead>
+                    <tr>
+                      <td><?php echo $mousewynsum ?></td>  
+                      <td><?php echo $monitorwynsum ?></td>
+                      <td><?php echo $keyboardwynsum?></td>  
+                      <td></td>  
+                      <td></td>  
+                      <td></td>  
+                      <td></td>
+                      <td></td> 
+                    </tr>
+        
+    </table>
+
+
+    <div class="table-responsive">
+            <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">List of Available Stocks at Cybergate, Mandaluyong Branch</caption>
+                <thead class="table-primary">  
                     <tr>  
                         <td>Asset Tag</td>
-                        <td>Company Code</td>  
+                        <td>Supplier Code</td>  
                         <td>Brand</td>  
-                        <td>Model</td>  
+                        <td>Model/Serial Number</td>  
                         <td>Description</td>  
                         <td>Branch</td>
-                        <td>Date Received </td>  
+                        <td>Date Purchased</td>
+                        <td>Date Received</td>  
                     </tr>  
                 </thead>
           <?php 
-
             //check if the starting row variable was passed in the URL or not
       if (!isset($_GET['startrow2']) or !is_numeric($_GET['startrow2'])) {
         //we give the value of the starting row to 0 because nothing was found in URL
@@ -154,7 +187,7 @@ else{
                 ?>
     </table>
 
-    <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+    <table class="table table-bordered text-center table-striped table-earning">  
                 <thead class="table-primary"> 
                 <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
                     <tr>  

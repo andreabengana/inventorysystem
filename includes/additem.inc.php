@@ -46,7 +46,7 @@ else{
 			$serialNum = 0000;
 			for($i=0; $i < $count; $i++) {
 			
-				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-R";
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
 				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
 				VALUES 
 				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
@@ -57,7 +57,7 @@ else{
 			$serialNum = (int)$tagExplode[3];
 			for($i=0; $i < $count; $i++) {
 			
-				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-R";
+				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
 				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
 				VALUES 
 				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
