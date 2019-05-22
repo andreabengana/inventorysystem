@@ -120,8 +120,7 @@ else{
                         <td>Company Code</td>  
                         <td>Brand</td>  
                         <td>Model</td>  
-                        <td>Description</td>  
-                        <td>Asset tag</td>
+                        <td>Description</td>
                         <td>Branch</td>
                         <td>Date Received </td>  
                     </tr>  
