@@ -39,9 +39,6 @@ if(isset($_POST['dispatchbtn'])){
 		echo $maxDispatchID["dispatchID"];
 		
 		for ($i=0; $i < $quantity; $i++) { 
-			// $tblproduct_array[$i]["productStatus"] = "Dispatched";
-			// $tblproduct_array[$i]["employeeAssigned"] = $employeecode;
-			// $tblproduct_array[$i]["workstationAssigned"] = $dispatchtoworkstation;
 
 			$sql = "UPDATE tblproducts SET productStatus = 'Dispatched', employeeAssigned = '$employeecode', workstationAssigned = '$dispatchtoworkstation' WHERE productID = ".$tblproduct_array[$i]["productID"];
 			$result = mysqli_query($conn, $sql);
