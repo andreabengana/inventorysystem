@@ -87,7 +87,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>
                         <td>'.$row["productBranch"].'</td>
-                        <td></td>
+                        <td>'.$row["datePurchased"].'</td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
@@ -170,6 +170,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>
                         <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["datePurchased"].'</td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
@@ -186,17 +187,19 @@ else{
               <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
-
+    <div class="table-responsive">
     <table class="table table-bordered text-center table-striped table-earning">  
+    <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
+                    
                 <thead class="table-primary"> 
-                <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
-                    <tr>  
+                <tr>  
                         <td>Asset Tag</td>
                         <td>Company Code</td>  
                         <td>Brand</td>  
                         <td>Model</td>  
                         <td>Description</td>
                         <td>Branch</td>
+                        <td>Date Purchased</td>
                         <td>Date Received </td>  
                     </tr>  
                 </thead>
@@ -221,6 +224,7 @@ else{
                         <td>'.$row["productModel"].'</td>  
                         <td>'.$row["productDesc"].'</td>
                         <td>'.$row["productBranch"].'</td>
+                        <td>'.$row["datePurchased"].'</td>
                         <td>'.$row["dateAccepted"].'</td>
                     </tr>';
                 }
