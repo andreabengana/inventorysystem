@@ -29,20 +29,20 @@ if(isset($_POST['dispatchbtn'])){
 		header("Location: ../dispatch.php?error=empty");
 	}
 	else{
-		$sql = "SELECT productID FROM `tblproducts` WHERE productStatus = 'Available' AND productBrand = '$brand' AND productModel = '$code' AND productBranch = '$branch' ORDER by productTag ASC LIMIT ".$stocks;
+		$sql = "SELECT productID FROM `tblproducts` WHERE productStatus = 'Dispatched' AND productBrand = '$brand' AND productModel = '$code' AND productBranch = '$branch' ORDER by productTag ASC LIMIT ".$stocks;
 		$result = mysqli_query($conn, $sql);
 		
 		while($row = mysqli_fetch_array($result)){
 			$tblproduct_array[] = $row;
 		}
 
-		$sql = "SELECT dispatchID FROM `tbldispatch` ORDER BY dispatchID DESC LIMIT 1";
-		$result = mysqli_query($conn, $sql);
-		$maxDispatchID = mysqli_fetch_assoc($result);
+		// $sql = "SELECT dispatchID FROM `tbldispatch` ORDER BY dispatchID DESC LIMIT 1";
+		// $result = mysqli_query($conn, $sql);
+		// $maxDispatchID = mysqli_fetch_assoc($result);
 
-		$maxDispatchID["dispatchID"] += 1;
+		// $maxDispatchID["dispatchID"] += 1;
 
-		echo $maxDispatchID["dispatchID"];
+		// echo $maxDispatchID["dispatchID"];
 		
 		for ($i=0; $i < $quantity; $i++) { 
 
