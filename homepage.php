@@ -122,14 +122,14 @@ else{
                     </tr>  
                 </thead>
                     <tr>
-                      <td><?php echo $mousewynsum ?></td>  
-                      <td><?php echo $monitorwynsum ?></td>
+                      <td><?php echo $mousewynsum?></td>  
+                      <td><?php echo $monitorwynsum?></td>
                       <td><?php echo $keyboardwynsum?></td>  
-                      <td></td>  
-                      <td></td>  
-                      <td></td>  
-                      <td></td>
-                      <td></td> 
+                      <td><?php echo $avrwynsum?></td>  
+                      <td><?php echo $cpuwynsum?></td>  
+                      <td><?php echo $headphoneswynsum?></td>  
+                      <td><?php echo $chairwynsum?></td>
+                      <td><?php echo $tablewynsum?></td> 
                     </tr>
         
     </table>
@@ -187,20 +187,49 @@ else{
               <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
+
+    <div class="table-responsive">
+            <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">Total Number of Available Stocks per Asset at Cybergate, Mandaluyong Branch</caption>
+                <thead class="table-primary">  
+                    <tr>
+                        <td>Mouse</td>  
+                        <td>Monitors</td>
+                        <td>Keyboards</td>  
+                        <td>AVR</td>  
+                        <td>CPU</td>  
+                        <td>Headphones</td>  
+                        <td>Chair</td>
+                        <td>Table</td> 
+                    </tr>  
+                </thead>
+                    <tr>
+                      <td><?php echo $mousecybergate?></td>  
+                      <td><?php echo $monitorcybergate?></td>
+                      <td><?php echo $keyboardcybergate?></td>  
+                      <td><?php echo $avrcybergate?></td>  
+                      <td><?php echo $cpucybergate?></td>  
+                      <td><?php echo $headphonescybergate?></td>  
+                      <td><?php echo $chaircybergate?></td>
+                      <td><?php echo $tablecybergate?></td> 
+                    </tr>
+        
+    </table>
+
     <div class="table-responsive">
     <table class="table table-bordered text-center table-striped table-earning">  
-    <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
+    <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC Branch</caption> 
                     
                 <thead class="table-primary"> 
                 <tr>  
                         <td>Asset Tag</td>
-                        <td>Company Code</td>  
+                        <td>Supplier Code</td>  
                         <td>Brand</td>  
-                        <td>Model</td>  
-                        <td>Description</td>
+                        <td>Model/Serial Number</td>  
+                        <td>Description</td>  
                         <td>Branch</td>
                         <td>Date Purchased</td>
-                        <td>Date Received </td>  
+                        <td>Date Received</td>  
                     </tr>  
                 </thead>
           <?php 
@@ -240,6 +269,34 @@ else{
               <button class="btn btn-lg btn-primary">Prev</button></a>';
                 ?>
     </table>
+
+        <div class="table-responsive">
+            <table id="employee_data" class="table table-bordered text-center table-striped table-earning">  
+            <caption style="caption-side:top;">Total Number of Available Stocks per Asset at EcoTower, BGC Branch</caption>
+                <thead class="table-primary">  
+                    <tr>
+                        <td>Mouse</td>  
+                        <td>Monitors</td>
+                        <td>Keyboards</td>  
+                        <td>AVR</td>  
+                        <td>CPU</td>  
+                        <td>Headphones</td>  
+                        <td>Chair</td>
+                        <td>Table</td> 
+                    </tr>  
+                </thead>
+                    <tr>
+                      <td><?php echo $mouseecotower?></td>  
+                      <td><?php echo $monitorecotower?></td>
+                      <td><?php echo $keyboardecotower?></td>  
+                      <td><?php echo $avrecotower?></td>  
+                      <td><?php echo $cpuecotower?></td>  
+                      <td><?php echo $headphonesecotower?></td>  
+                      <td><?php echo $chairecotower?></td>
+                      <td><?php echo $tableecotower?></td> 
+                    </tr>
+        
+            </table>
 </div>
 
 	</div>
