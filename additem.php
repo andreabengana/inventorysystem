@@ -124,7 +124,7 @@ else{
 
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" name="additembtn">Confirm</button>
+          <button type="submit" class="btn btn-default" name="additembtn">Confirm</button>
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
           
         </div>
