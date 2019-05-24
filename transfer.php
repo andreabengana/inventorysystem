@@ -86,7 +86,7 @@ else{
                 <div class="form-row" id="row3">
 									<div class="form-group col-md-6">
 											<label> Branch Assigned </label>
-											<select class="form-control" name="branch">
+											<select class="form-control" name="newbranch">
 													<option value="Cybergate">Cybergate, Mandaluyong</option>
 													<option value="EcoTower">EcoTower, BGC</option>
 													<option value="Wynsum">Wynsum, Ortigas</option>
@@ -94,7 +94,7 @@ else{
 									</div>
 									<div class="form-group col-md-6 mx-auto d-block">
 										<label>Issued to?</label>
-												<input type="text" class="form-control" name="department" placeholder="-Department Name-">  
+												<input type="text" class="form-control" name="newdepartment" placeholder="-Department Name-">  
                 	</div>
                 </div>
                 <!-- <div class="form-group col-md-6 mx-auto d-block" style="margin-top: 20px;">
@@ -104,11 +104,11 @@ else{
 								<div class="form-row" id="row4">
   								<div class="form-group col-md-6 mx-auto d-block">
   									<label for="dispatchToEmployee">Assign To Employee</label>
-  									<input type="text" name="employeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
+  									<input type="text" name="newemployeecode" class="form-control" placeholder="Employeee Code" name="employeedDispatch">
   							  </div>
     							<div class="form-group col-md-6">
       								<label for="Workstation">Workstation</label>
-      								<input type="text" class="form-control"  placeholder="Workstation Code" name="dispatchToWorkstation">
+      								<input type="text" class="form-control"  placeholder="Workstation Code" name="newdispatchToWorkstation">
     							</div>
                 </div>
  								

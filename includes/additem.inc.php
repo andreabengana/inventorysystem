@@ -1,6 +1,27 @@
 <?php 
 
-if(isset($_POST['additembtn'])){
+/*if(isset($_POST['additemmodal'])){
+	$companyname = $_POST['suppliername'];
+	$brand = $_POST['productbrand'];
+	$code1 = $_POST['code1'];
+	$code2 = $_POST['code2'];
+	$producttype = $_POST['producttype'];
+	$count = $_POST['stocks'];
+	$branch = $_POST['branch'];
+	$status = "Available";	
+
+	if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($branch)){
+		header("Location: ../additem.php?error=empty");
+		exit();
+	}
+	elseif($code1 !== $code2){
+		header("Location: ../additem.php?error=productcode");
+		exit();
+	}else{
+
+	}
+}
+else*/ if(isset($_POST['additembtn'])){
 	require 'db.inc.php';
 
 	
@@ -11,9 +32,10 @@ if(isset($_POST['additembtn'])){
 	$producttype = $_POST['producttype'];
 	$count = $_POST['stocks'];
 	$branch = $_POST['branch'];
+	$datepurchased = $_POST['datepurchased'];
 	$status = "Available";	
 
-if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($branch)){
+if(empty($companyname) || empty($brand) || empty($code1) || empty($code2) || empty($producttype) || empty($branch) || empty($datepurchased)){
 	header("Location: ../additem.php?error=empty");
 	exit();
 }
@@ -31,9 +53,9 @@ else{
 		for($i=0; $i < $count; $i++) {
 			
 			$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-W";
-			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+			$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, datePurchased) 
 			VALUES 
-			('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+			('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch', '$datepurchased');";
 			mysqli_query($conn, $sql);
 		}
 		header("Location: ../additem.php?itemadded");
@@ -47,9 +69,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, datePurchased) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch', '$datepurchased');";
 				mysqli_query($conn, $sql);
 			}
 		} else{
@@ -58,9 +80,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-C";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus, datePurchased) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status', '$datepurchased');";
 				mysqli_query($conn, $sql);
 			}
 		}
@@ -75,9 +97,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus, datePurchased) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status', '$datepurchased');";
 				mysqli_query($conn, $sql);
 			}
 		} else{
@@ -86,9 +108,9 @@ else{
 			for($i=0; $i < $count; $i++) {
 			
 				$code = "AGBI-FF-01-".str_pad($serialNum+=1, 4, "0", STR_PAD_LEFT)."-E";
-				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus) 
+				$sql = "INSERT INTO tblproducts (productCompanyCode, productBrand, productModel, productDesc, productTag, productBranch, productStatus, datePurchased) 
 				VALUES 
-				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status');";
+				('$companyname', '$brand', '$code1', '$producttype', '$code', '$branch','$status', '$datepurchased');";
 				mysqli_query($conn, $sql);
 			}
 		}

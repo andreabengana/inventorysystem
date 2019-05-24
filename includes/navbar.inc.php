@@ -47,6 +47,7 @@ if (!isset($_SESSION['userUid'])) {
           				<a class="dropdown-item text-center" href= "additem.php">Add New Asset</a>
           				<a class="dropdown-item text-center" href= "dispatch.php"> Dispatch Asset</a>
           				<a class="dropdown-item text-center" href= "transfer.php">Transfer Asset</a>
+						<a class="dropdown-item text-center" href= "return.php">Return Asset</a>
           				<a class="dropdown-item text-center" href= "includes/logout.inc.php">Log Out</a>
         			</div>
       		</li>
