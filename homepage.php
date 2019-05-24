@@ -192,12 +192,13 @@ else{
                 <caption style="caption-side:top;" id="ecotowerstocks">List of Available Stocks at EcoTower, BGC</caption> 
                     <tr>  
                         <td>Asset Tag</td>
-                        <td>Company Code</td>  
+                        <td>Supplier Code</td>  
                         <td>Brand</td>  
-                        <td>Model</td>  
-                        <td>Description</td>
+                        <td>Model/Serial Number</td>  
+                        <td>Description</td>  
                         <td>Branch</td>
-                        <td>Date Received </td>  
+                        <td>Date Purchased</td>
+                        <td>Date Received</td>  
                     </tr>  
                 </thead>
           <?php 
