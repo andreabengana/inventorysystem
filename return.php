@@ -23,14 +23,14 @@ if(!isset($_SESSION['userUid'])){
       								<label for="inputfirstname">Asset Tag</label>
       								<input type="text" name="assetTag" class="form-control" placeholder="-Asset Tag-">
     							</div>
-                  <div class="form-group col-md-6">
-      								<label for="inputfirstname">Asset Tag</label>
-      								<input type="text" name="assetTag" class="form-control" placeholder="-Asset Tag-">
+                  				<div class="form-group col-md-6">
+      								<label for="inputfirstname">Reason</label>
+      								<input type="text" name="reason" class="form-control" placeholder="-Short Description-">
     							</div>
     							
   							</div>
                 
- 								<button type="submit" class="btn btn-lg btn-success" name="dispatchbtn">Dispatch Asset</button>
+ 								<button type="submit" class="btn btn-lg btn-success" name="returnbtn">Return Asset</button>
                 
 						</form>
 
