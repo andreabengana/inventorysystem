@@ -11,6 +11,7 @@ if(isset($_POST['dispatchbtn'])){
 	$device = $_POST['productdesc'];
 	$brand = $_POST['productbrand'];
     $code = $_POST['code1'];
+    $quantity = $_POST['stocks'];
     
     //existing
     $branch = $_POST['branch'];
@@ -18,17 +19,17 @@ if(isset($_POST['dispatchbtn'])){
 	$employeecode = $_POST['employeecode'];
     $dispatchtoworkstation = $_POST['dispatchToWorkstation'];
     
-    $branch = $_POST['newbranch'];
-    $department = $_POST['newdepartment'];
-	$employeecode = $_POST['newemployeecode'];
-    $dispatchtoworkstation = $_POST['newdispatchToWorkstation'];
+    $newbranch = $_POST['newbranch'];
+    $newdepartment = $_POST['newdepartment'];
+	$newemployeecode = $_POST['newemployeecode'];
+    $newdispatchtoworkstation = $_POST['newdispatchToWorkstation'];
 	
 
 	if (empty($device) || empty($brand) || empty($code) || empty($branch)  || empty($department)){
 		header("Location: ../dispatch.php?error=empty");
 	}
 	else{
-		$sql = "SELECT productID FROM `tblproducts` WHERE productStatus = 'Available' AND productBrand = '$brand' AND productModel = '$code' AND productBranch = '$branch' ORDER by productTag ASC LIMIT 5";
+		$sql = "SELECT productID FROM `tblproducts` WHERE productStatus = 'Available' AND productBrand = '$brand' AND productModel = '$code' AND productBranch = '$branch' ORDER by productTag ASC LIMIT ".$stocks;
 		$result = mysqli_query($conn, $sql);
 		
 		while($row = mysqli_fetch_array($result)){
@@ -45,18 +46,18 @@ if(isset($_POST['dispatchbtn'])){
 		
 		for ($i=0; $i < $quantity; $i++) { 
 
-			$sql = "UPDATE tblproducts SET productStatus = 'Dispatched', employeeAssigned = '$employeecode', workstationAssigned = '$dispatchtoworkstation' WHERE productID = ".$tblproduct_array[$i]["productID"];
+			$sql = "UPDATE tblproducts SET productStatus = 'Dispatched', employeeAssigned = '$newemployeecode', workstationAssigned = '$newdispatchtoworkstation' WHERE productID = ".$tblproduct_array[$i]["productID"];
 			$result = mysqli_query($conn, $sql);
 
 			
 
-			$sql = "SELECT userID FROM tblusers WHERE userName = '$sessionName'";
-			$result = mysqli_query($conn, $sql);
-			$row = mysqli_fetch_assoc($result);
+			// $sql = "SELECT userID FROM tblusers WHERE userName = '$sessionName'";
+			// $result = mysqli_query($conn, $sql);
+			// $row = mysqli_fetch_assoc($result);
 
-			$sql = "INSERT INTO tbldispatch (`dispatchID`, `userID`, `productID`, `dispatchToDepartment`) VALUES 
-			(".$maxDispatchID["dispatchID"].", ".$row['userID'].", '".$tblproduct_array[$i]["productID"]."', '$department');";
-			$result = mysqli_query($conn, $sql);
+			// $sql = "INSERT INTO tbldispatch (`dispatchID`, `userID`, `productID`, `dispatchToDepartment`) VALUES 
+			// (".$maxDispatchID["dispatchID"].", ".$row['userID'].", '".$tblproduct_array[$i]["productID"]."', '$department');";
+			// $result = mysqli_query($conn, $sql);
 			
 		}
 
