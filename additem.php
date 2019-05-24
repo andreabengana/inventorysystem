@@ -92,8 +92,51 @@ else{
                         <option value="Wynsum">Wynsum, Ortigas</option>
                     </select>
                   </div>
+                  <div class="form-group col-md-6">
+                    <label> Date Purchased </label>
+                    <input type="date" class="form-control" name="datepurchased">
+                  </div>
                 </div>
- 								<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button>
+  <!-- EDITING STARTS HERE-->
+ 							<!--	<button type="submit" class="btn btn-lg btn-success" name="additembtn">Add Item</button> -->
+
+                <button type="button" class="btn btn-success btn-lg" data-toggle="modal" name="additemmodal" data-target="#myModal">Add Asset</button>
+
+      <!-- Modal -->
+        <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+        <h4 class="modal-title">Confirm Asset Entries</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          
+        </div>
+        <div class="modal-body">
+          <p>Please take your time to check the asset entries before adding it.</p>
+          <p>Supplier: </p>
+          <p>Brand: </p>
+          <p>Asset Model: </p>
+          <p>Asset Type: </p>
+          <p>Quantity: </p>
+          <p>Branch Assigned: </p>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal" name="additembtn">Confirm</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+      
+    </div>
+  </div>
+
+            
+</div>
+<!-- EDITING ENDS HERE -->
+
 						</form>
 			</div>
 		</div>
