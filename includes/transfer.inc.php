@@ -10,14 +10,19 @@ if(isset($_POST['dispatchbtn'])){
 
 	$device = $_POST['productdesc'];
 	$brand = $_POST['productbrand'];
-	$code = $_POST['code'];
-	$branch = $_POST['branch'];
+    $code = $_POST['code1'];
+    
+    //existing
+    $branch = $_POST['branch'];
+    $department = $_POST['department'];
 	$employeecode = $_POST['employeecode'];
-	$department = $_POST['department'];
-	$dispatchtoworkstation = $_POST['dispatchToWorkstation'];
+    $dispatchtoworkstation = $_POST['dispatchToWorkstation'];
+    
+    $branch = $_POST['newbranch'];
+    $department = $_POST['newdepartment'];
+	$employeecode = $_POST['newemployeecode'];
+    $dispatchtoworkstation = $_POST['newdispatchToWorkstation'];
 	
-
-	$department = $_POST['department'];
 
 	if (empty($device) || empty($brand) || empty($code) || empty($branch)  || empty($department)){
 		header("Location: ../dispatch.php?error=empty");
