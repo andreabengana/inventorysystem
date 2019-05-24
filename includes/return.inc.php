@@ -41,9 +41,11 @@ if(isset($_POST['dispatchbtn'])){
 
 			$sql = "SELECT userID FROM tblusers WHERE userName = '$sessionName'";
 			$result = mysqli_query($conn, $sql);
-			$row = mysqli_fetch_assoc($result);
-
-			$sql = "INSERT INTO tbldispatch (`dispatchID`, `userID`, `productID`, `dispatchToDepartment`) VALUES 
+            $row = mysqli_fetch_assoc($result);
+            
+            
+            //tblreturn not created yet
+			$sql = "INSERT INTO tblreturn (`dispatchID`, `userID`, `productID`, `dispatchToDepartment`) VALUES 
 			(".$maxDispatchID["dispatchID"].", ".$row['userID'].", '".$tblproduct_array[$i]["productID"]."', '$department');";
 			$result = mysqli_query($conn, $sql);
 			
