@@ -11,26 +11,30 @@ if(!isset($_SESSION['userUid'])){
 ?>
 <head>
   <link rel="stylesheet" type="text/css" href="design/additemdesign.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
 			<div class="text-center">
 				<a href="homepage.php" class="btn btn-danger float-left">Back</a><h1 style="color: black; margin-right: 90px;">Return Asset</h1>
-						<form action="includes/dispatch.inc.php" method="POST">
-							<label for="row1"><h3> Asset Details </h3></label>
-  							<div class="form-row" id="row1" style="margin-top: 0px!important;">
-    							<div class="form-group col-md-6">
-      								<label for="inputfirstname">Asset Tag</label>
-      								<input type="text" name="assetTag" class="form-control" placeholder="-Asset Tag-">
-    							</div>
-                  				<div class="form-group col-md-6">
-      								<label for="inputfirstname">Reason</label>
-      								<input type="text" name="reason" class="form-control" placeholder="-Short Description-">
-    							</div>
-    							
-  							</div>
-                
- 								<button type="submit" class="btn btn-lg btn-success" name="returnbtn">Return Asset</button>
+						<form action="includes/return.inc.php" method="POST">
+						<div class="container">
+							<div class="form-group">
+								<div class="input-group">
+									<span class="input-group-addon">Search</span>
+									<input type="text" name="search_text" id="search_text" placeholder="Search" class="form-control" />
+								</div>
+							</div>
+							<br />
+							<div id="result"></div>
+						</div>
+						<div style="clear:both"></div>
+						<br />
+						
+						<br />
+						<br />
+						<br />
                 
 						</form>
 
@@ -42,4 +46,34 @@ if(!isset($_SESSION['userUid'])){
 		</div>
 </body>
 </html>
+
+<script>
+$(document).ready(function(){
+	load_data();
+	function load_data(query)
+	{
+		$.ajax({
+			url:"fetch.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+		});
+	}
+	
+	$('#search_text').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
+</script>
 
