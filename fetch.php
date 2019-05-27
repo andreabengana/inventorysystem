@@ -50,8 +50,8 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["productCompanyCode"].'</td>
                 <td>'.$row["productDesc"].'</td>
                 <td>'.$row["dateAccepted"].'</td>
-                <td contenteditable>'.$row["productStatus"].'</td>
-                <td contenteditable>'.$row["datePurchased"].'</td>
+                <td class ="first_name" data-id1="'.$row["productID"].'" contenteditable>'.$row["productStatus"].'</td>
+                <td class ="last_name" data-id2="'.$row["productID"].'" contenteditable>'.$row["datePurchased"].'</td>
 			</tr>
 		';
 	}

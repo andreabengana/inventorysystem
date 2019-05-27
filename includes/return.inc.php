@@ -23,14 +23,6 @@ if(isset($_POST['dispatchbtn'])){
 		while($row = mysqli_fetch_array($result)){
 			$tblproduct_array[] = $row;
 		}
-
-		$sql = "SELECT dispatchID FROM `tbldispatch` ORDER BY dispatchID DESC LIMIT 1";
-		$result = mysqli_query($conn, $sql);
-		$maxDispatchID = mysqli_fetch_assoc($result);
-
-		$maxDispatchID["dispatchID"] += 1;
-
-		echo $maxDispatchID["dispatchID"];
 		
 		for ($i=0; $i < $quantity; $i++) { 
 

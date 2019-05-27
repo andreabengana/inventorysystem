@@ -62,6 +62,30 @@ $(document).ready(function(){
 			}
 		});
 	}
+
+	function edit_data(id, text, column_name)  
+    {  
+        $.ajax({  
+            url:"edit.php",  
+            method:"POST",  
+            data:{id:id, text:text, column_name:column_name},  
+            dataType:"text",  
+            success:function(data){  
+                //alert(data);
+				$('#result').html("<div class='alert alert-success'>"+data+"</div>");
+            }  
+        });  
+    }  
+    $(document).on('blur', '.first_name', function(){  
+        var id = $(this).data("id1");  
+        var first_name = $(this).text();  
+        edit_data(id, first_name, "productStatus");  
+    });  
+    $(document).on('blur', '.last_name', function(){  
+        var id = $(this).data("id2");  
+        var last_name = $(this).text(); 
+        edit_data(id, last_name, "datePurchased");  
+    }); 
 	
 	$('#search_text').keyup(function(){
 		var search = $(this).val();
