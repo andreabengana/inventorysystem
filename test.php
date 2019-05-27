@@ -1,42 +1,66 @@
-<?php
-require 'includes/db.inc.php';
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>Webslesson Demo - Ajax Live Data Search using Jquery PHP MySql</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="container">
+			<br />
+			<br />
+			<br />
+			<h2 align="center">Ajax Live Data Search using Jquery PHP MySql</h2><br />
+			<div class="form-group">
+				<div class="input-group">
+					<span class="input-group-addon">Search</span>
+					<input type="text" name="search_text" id="search_text" placeholder="Search by Customer Details" class="form-control" />
+				</div>
+			</div>
+			<br />
+			<div id="result"></div>
+		</div>
+		<div style="clear:both"></div>
+		<br />
+		
+		<br />
+		<br />
+		<br />
+	</body>
+</html>
 
-// $device = $_POST['productdesc'];
-// $brand = $_POST['productbrand'];
-// $code = $_POST['code'];
-// $quantity = $_POST['quantity'];
-// $branch = $_POST['branch'];
-// $employeecode = $_POST['employeecode'];
-// $department = $_POST['department'];
-// $dispatchtoworkstation = $_POST['dispatchToWorkstation'];
+
+<script>
+$(document).ready(function(){
+	load_data();
+	function load_data(query)
+	{
+		$.ajax({
+			url:"fetch.php",
+			method:"post",
+			data:{query:query},
+			success:function(data)
+			{
+				$('#result').html(data);
+			}
+		});
+	}
+	
+	$('#search_text').keyup(function(){
+		var search = $(this).val();
+		if(search != '')
+		{
+			load_data(search);
+		}
+		else
+		{
+			load_data();			
+		}
+	});
+});
+</script>
 
 
-// $department = $_POST['department'];
 
 
-$sql = "SELECT * FROM `tblproducts` WHERE productStatus = 'Available' AND productBrand = 'A4Tech' AND productModel = '12345' AND productBranch = 'Cybergate' ORDER by productTag ASC LIMIT 5";
-
-
-
-//$array[row][column]
-
-$result = mysqli_query($conn, $sql);
-$log_qry_cnt = mysqli_num_rows($result);
-while($row2 = mysqli_fetch_array($result))
-{
-    $log_array[] = $row2;
-}
-
-for ($i=0; $i < 5; $i++) { 
-    echo $log_array[$i]["productStatus"].$log_array[$i]["productTag"].$log_array[$i]["productID"]."<br>";
-}
-
-for ($i=0; $i < 5; $i++) { 
-    $log_array[$i]["productStatus"] = "Dispatched";
-}
-
-for ($i=0; $i < 5; $i++) { 
-    echo $log_array[$i]["productStatus"].$log_array[$i]["productTag"]."<br>";
-}
-
-?>

@@ -34,7 +34,7 @@ if(isset($_POST['dispatchbtn'])){
 		
 		for ($i=0; $i < $quantity; $i++) { 
 
-			$sql = "UPDATE tblproducts SET productStatus = 'Dispatched', employeeAssigned = '$employeecode', workstationAssigned = '$dispatchtoworkstation' WHERE productID = ".$tblproduct_array[$i]["productID"];
+			$sql = "UPDATE tblproducts SET productStatus = 'Returned', employeeAssigned = ' ', workstationAssigned = ' ' WHERE productID = ".$tblproduct_array[$i]["productID"];
 			$result = mysqli_query($conn, $sql);
 
 			
