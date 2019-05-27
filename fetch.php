@@ -1,9 +1,9 @@
 <?php
-$connect = mysqli_connect("localhost", "root", "", "inventorysystem");
-$output = '';
+include "includes/db.inc.php";
+
 if(isset($_POST["query"]))
 {
-	$search = mysqli_real_escape_string($connect, $_POST["query"]);
+	$search = mysqli_real_escape_string($conn, $_POST["query"]);
 	$query = "
 	SELECT * FROM tblproducts 
 	WHERE productBranch LIKE '%".$search."%'
@@ -22,7 +22,8 @@ else
 	$query = "
 	SELECT * FROM tblproducts ORDER BY productID";
 }
-$result = mysqli_query($connect, $query);
+$result = mysqli_query($conn, $query);
+$output = '';
 if(mysqli_num_rows($result) > 0)
 {
 	$output .= '<div class="table-responsive">
@@ -49,8 +50,8 @@ if(mysqli_num_rows($result) > 0)
 				<td>'.$row["productCompanyCode"].'</td>
                 <td>'.$row["productDesc"].'</td>
                 <td>'.$row["dateAccepted"].'</td>
-                <td><input type="text" name="code" class="form-control" placeholder="-Product Code-" value="'.$row["productStatus"].'"></td>
-                <td>'.$row["datePurchased"].'</td>
+                <td contenteditable>'.$row["productStatus"].'</td>
+                <td contenteditable>'.$row["datePurchased"].'</td>
 			</tr>
 		';
 	}
