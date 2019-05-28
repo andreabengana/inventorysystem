@@ -5,7 +5,7 @@
 	$column_name = $_POST["column_name"];  
 	$sql = "UPDATE tblproducts SET ".$column_name."='".$text."' WHERE productID= ".$id;  
 	
-	//if incoming changes is set from "Returned" or "Damaged" to "Dispatched" or "Available"
+	//if INCOMING CHANGES is set FROM "Returned" or "Damaged" TO "Dispatched" or "Available"
 	//to avoid manipulation of data
 	if($text == "Dispatched" || $text == "Available"){
 		echo 'Data Not Updated';
