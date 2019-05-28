@@ -66,7 +66,7 @@ $(document).ready(function(){
 	function edit_data(id, text, column_name)  
     {  
         $.ajax({  
-            url:"edit.php",  
+            url:"includes/return.inc.php",  
             method:"POST",  
             data:{id:id, text:text, column_name:column_name},  
             dataType:"text",  

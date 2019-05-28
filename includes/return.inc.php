@@ -1,58 +1,16 @@
-<?php
+<?php  
+	$connect = mysqli_connect("localhost", "root", "", "inventorysystem");
+	$id = $_POST["id"];  
+	$text = $_POST["text"];  
+	$column_name = $_POST["column_name"];  
+	$sql = "UPDATE tblproducts SET ".$column_name."='".$text."' WHERE productID= ".$id;  
+	if(mysqli_query($connect, $sql))  
+	{  
+		echo 'Data Updated';
+		header("Location: ../return.php");
 
-session_start();
-
-if(isset($_POST['dispatchbtn'])){
-
-	require 'db.inc.php';
-
-	$sessionName = $_SESSION['userUid'];
-
-    //change these
-	$assettag = $_POST['assetTag'];
-	$reason = $_POST['reason'];
-
-
-	if (empty($assettag) || empty($reason)){
-		header("Location: ../return.php?error=empty");
-	}
-	else{
-		$sql = "SELECT productID FROM `tblproducts` WHERE productTag = '$assettag'";
-		$result = mysqli_query($conn, $sql);
-		
-		while($row = mysqli_fetch_array($result)){
-			$tblproduct_array[] = $row;
-		}
-		
-		for ($i=0; $i < $quantity; $i++) { 
-
-			$sql = "UPDATE tblproducts SET productStatus = 'Returned', employeeAssigned = ' ', workstationAssigned = ' ' WHERE productID = ".$tblproduct_array[$i]["productID"];
-			$result = mysqli_query($conn, $sql);
-
-			
-
-			$sql = "SELECT userID FROM tblusers WHERE userName = '$sessionName'";
-			$result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_assoc($result);
-            
-            
-            //tblreturn not created yet
-			$sql = "INSERT INTO tblreturn (`dispatchID`, `userID`, `productID`, `dispatchToDepartment`) VALUES 
-			(".$maxDispatchID["dispatchID"].", ".$row['userID'].", '".$tblproduct_array[$i]["productID"]."', '$department');";
-			$result = mysqli_query($conn, $sql);
-			
-		}
-
-	}
-
-
-
-
-
-}
-else{
-	header("Location: ../login.php");
-	exit();
-}
-
-?>
+	}  else{
+        echo 'Data Not Updated'.$id." ".$text." ".$column_name." ";
+        echo $sql; 
+    }
+ ?>
