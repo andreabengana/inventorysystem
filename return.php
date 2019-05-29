@@ -53,7 +53,7 @@ $(document).ready(function(){
 	function load_data(query)
 	{
 		$.ajax({
-			url:"fetch.php",
+			url:"includes/fetch.inc.php",
 			method:"post",
 			data:{query:query},
 			success:function(data)

@@ -1,5 +1,5 @@
 <?php
-include "includes/db.inc.php";
+include "db.inc.php";
 
 if(isset($_POST["query"]))
 {
