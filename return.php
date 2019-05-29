@@ -86,6 +86,11 @@ $(document).ready(function(){
         var last_name = $(this).text(); 
         edit_data(id, last_name, "datePurchased");  
     }); 
+	$(document).on('blur', '.reason', function(){  
+        var id = $(this).data("id3");  
+        var last_name = $(this).text(); 
+        edit_data(id, last_name, "reasonForReturn");  
+    }); 
 	
 	$('#search_text').keyup(function(){
 		var search = $(this).val();
