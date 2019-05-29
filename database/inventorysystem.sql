@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 22, 2019 at 01:50 AM
+-- Generation Time: May 29, 2019 at 09:01 AM
 -- Server version: 10.1.38-MariaDB
 -- PHP Version: 7.3.3
 
@@ -67,64 +67,84 @@ CREATE TABLE `tblproducts` (
   `productTag` varchar(800) NOT NULL,
   `productStatus` varchar(800) NOT NULL,
   `employeeAssigned` varchar(800) DEFAULT NULL,
-  `workstationAssigned` varchar(800) DEFAULT NULL
+  `workstationAssigned` varchar(800) DEFAULT NULL,
+  `datePurchased` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tblproducts`
 --
 
-INSERT INTO `tblproducts` (`productID`, `productCompanyCode`, `productBrand`, `productModel`, `productDesc`, `dateAccepted`, `productBranch`, `productTag`, `productStatus`, `employeeAssigned`, `workstationAssigned`) VALUES
-(8, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0001-W', 'Dispatched', NULL, NULL),
-(9, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0002-W', 'Dispatched', '', ''),
-(10, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0003-W', 'Dispatched', '', ''),
-(11, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0004-W', 'Dispatched', '', ''),
-(12, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0005-W', 'Dispatched', '', ''),
-(13, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0006-W', 'Dispatched', '', ''),
-(14, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0007-W', 'Dispatched', '', ''),
-(15, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0008-W', 'Dispatched', '', ''),
-(16, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0009-W', 'Dispatched', '', ''),
-(17, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0010-W', 'Dispatched', '', ''),
-(18, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0011-W', 'Available', '', ''),
-(19, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0012-W', 'Available', '', ''),
-(20, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0013-W', 'Available', '', ''),
-(21, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0014-W', 'Available', '', ''),
-(22, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0015-W', 'Available', '', ''),
-(23, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0016-W', 'Available', '', ''),
-(24, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0017-W', 'Available', '', ''),
-(25, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0018-W', 'Available', NULL, NULL),
-(26, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0019-W', 'Available', NULL, NULL),
-(27, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0020-W', 'Available', NULL, NULL),
-(28, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0021-W', 'Available', NULL, NULL),
-(29, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0022-W', 'Available', NULL, NULL),
-(30, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0023-W', 'Available', NULL, NULL),
-(31, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0024-W', 'Available', NULL, NULL),
-(32, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0025-W', 'Available', NULL, NULL),
-(33, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0026-W', 'Available', NULL, NULL),
-(113, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0001-R', 'Available', NULL, NULL),
-(114, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0002-R', 'Available', NULL, NULL),
-(115, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0003-R', 'Available', NULL, NULL),
-(116, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0004-R', 'Available', NULL, NULL),
-(117, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0005-R', 'Available', NULL, NULL),
-(118, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0006-R', 'Available', NULL, NULL),
-(119, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0007-R', 'Available', NULL, NULL),
-(120, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0008-R', 'Available', NULL, NULL),
-(121, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0009-R', 'Available', NULL, NULL),
-(122, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0010-R', 'Available', NULL, NULL),
-(124, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:33:53', 'Cybergate', 'AGBI-FF-01-0011-R', 'Available', NULL, NULL),
-(126, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:37:22', 'Cybergate', 'AGBI-FF-01-0012-R', 'Available', NULL, NULL),
-(127, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:38:20', 'Cybergate', 'AGBI-FF-01-0013-R', 'Available', NULL, NULL),
-(128, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0001-E', 'Available', NULL, NULL),
-(129, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0002-E', 'Available', NULL, NULL),
-(130, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0003-E', 'Available', NULL, NULL),
-(131, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0004-E', 'Available', NULL, NULL),
-(132, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0005-E', 'Available', NULL, NULL),
-(133, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0006-E', 'Available', NULL, NULL),
-(134, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0007-E', 'Available', NULL, NULL),
-(135, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0008-E', 'Available', NULL, NULL),
-(136, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0009-E', 'Available', NULL, NULL),
-(137, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0010-E', 'Available', NULL, NULL),
-(138, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:58', 'EcoTower', 'AGBI-FF-01-0011-E', 'Available', NULL, NULL);
+INSERT INTO `tblproducts` (`productID`, `productCompanyCode`, `productBrand`, `productModel`, `productDesc`, `dateAccepted`, `productBranch`, `productTag`, `productStatus`, `employeeAssigned`, `workstationAssigned`, `datePurchased`) VALUES
+(8, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0001-W', 'Returned', NULL, NULL, '0000-00-00'),
+(9, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0002-W', 'Dispatched', '', '', '0000-00-00'),
+(10, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0003-W', 'Dispatched', '', '', '0000-00-00'),
+(11, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0004-W', 'Dispatched', '', '', '0000-00-00'),
+(12, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0005-W', 'Dispatched', '', '', '0000-00-00'),
+(13, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0006-W', 'Dispatched', '', '', '0000-00-00'),
+(14, 'SM Holdings', 'Logitech', 'G450', 'Mouse', '2019-05-17 05:25:51', 'Wynsum', 'AGBI-FF-01-0007-W', 'Dispatched', '', '', '0000-00-00'),
+(15, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0008-W', 'Dispatched', '', '', '0000-00-00'),
+(16, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0009-W', 'Dispatched', '', '', '0000-00-00'),
+(17, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0010-W', 'Dispatched', '', '', '0000-00-00'),
+(18, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0011-W', 'Available', '', '', '2019-05-13'),
+(19, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0012-W', 'Available', '', '', '0000-00-00'),
+(20, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0013-W', 'Available', '', '', '0000-00-00'),
+(21, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0014-W', 'Available', '', '', '0000-00-00'),
+(22, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0015-W', 'Available', '', '', '0000-00-00'),
+(23, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0016-W', 'Available', '', '', '0000-00-00'),
+(24, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 05:49:16', 'Wynsum', 'AGBI-FF-01-0017-W', 'Available', '', '', '0000-00-00'),
+(25, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0018-W', 'Available', NULL, NULL, '0000-00-00'),
+(26, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0019-W', 'Available', NULL, NULL, '0000-00-00'),
+(27, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0020-W', 'Available', NULL, NULL, '0000-00-00'),
+(28, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0021-W', 'Available', NULL, NULL, '0000-00-00'),
+(29, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0022-W', 'Available', NULL, NULL, '0000-00-00'),
+(30, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0023-W', 'Available', NULL, NULL, '0000-00-00'),
+(31, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0024-W', 'Available', NULL, NULL, '0000-00-00'),
+(32, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0025-W', 'Available', NULL, NULL, '0000-00-00'),
+(33, 'SM Holdings', 'A4Tech', '6789', 'Keyboard', '2019-05-17 05:55:50', 'Wynsum', 'AGBI-FF-01-0026-W', 'Available', NULL, NULL, '0000-00-00'),
+(113, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0001-R', 'Available', NULL, NULL, '0000-00-00'),
+(114, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0002-R', 'Available', NULL, NULL, '0000-00-00'),
+(115, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0003-R', 'Available', NULL, NULL, '0000-00-00'),
+(116, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0004-R', 'Available', NULL, NULL, '0000-00-00'),
+(117, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0005-R', 'Available', NULL, NULL, '0000-00-00'),
+(118, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0006-R', 'Available', NULL, NULL, '0000-00-00'),
+(119, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0007-R', 'Available', NULL, NULL, '0000-00-00'),
+(120, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0008-R', 'Available', NULL, NULL, '0000-00-00'),
+(121, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0009-R', 'Available', NULL, NULL, '0000-00-00'),
+(122, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:30:58', 'Cybergate', 'AGBI-FF-01-0010-R', 'Available', NULL, NULL, '0000-00-00'),
+(124, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:33:53', 'Cybergate', 'AGBI-FF-01-0011-R', 'Available', NULL, NULL, '0000-00-00'),
+(126, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:37:22', 'Cybergate', 'AGBI-FF-01-0012-R', 'Available', NULL, NULL, '0000-00-00'),
+(127, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:38:20', 'Cybergate', 'AGBI-FF-01-0013-R', 'Available', NULL, NULL, '0000-00-00'),
+(128, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0001-E', 'Available', NULL, NULL, '0000-00-00'),
+(129, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0002-E', 'Available', NULL, NULL, '0000-00-00'),
+(130, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0003-E', 'Available', NULL, NULL, '0000-00-00'),
+(131, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0004-E', 'Available', NULL, NULL, '0000-00-00'),
+(132, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0005-E', 'Available', NULL, NULL, '0000-00-00'),
+(133, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0006-E', 'Available', NULL, NULL, '0000-00-00'),
+(134, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0007-E', 'Available', NULL, NULL, '0000-00-00'),
+(135, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0008-E', 'Available', NULL, NULL, '0000-00-00'),
+(136, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0009-E', 'Available', NULL, NULL, '0000-00-00'),
+(137, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:05', 'EcoTower', 'AGBI-FF-01-0010-E', 'Available', NULL, NULL, '0000-00-00'),
+(138, 'SM Holdings', 'A4Tech', '12345', 'Mouse', '2019-05-17 06:41:58', 'EcoTower', 'AGBI-FF-01-0011-E', 'Available', NULL, NULL, '0000-00-00'),
+(139, 'SM Holdings', 'NEC', '6789', 'AVR', '2019-05-24 05:36:43', 'EcoTower', 'AGBI-FF-01-0012-E', 'Available', NULL, NULL, '2019-05-24'),
+(140, 'SM Holdings', 'NEC', '6789', 'AVR', '2019-05-24 05:36:43', 'EcoTower', 'AGBI-FF-01-0013-E', 'Available', NULL, NULL, '2019-05-24'),
+(141, 'SM Holdings', 'NEC', '6789', 'AVR', '2019-05-24 05:36:43', 'EcoTower', 'AGBI-FF-01-0014-E', 'Available', NULL, NULL, '2019-05-24'),
+(142, 'SM Holdings', 'NEC', '6789', 'AVR', '2019-05-24 05:36:43', 'EcoTower', 'AGBI-FF-01-0015-E', 'Available', NULL, NULL, '2019-05-24'),
+(143, 'SM Holdings', 'NEC', '6789', 'AVR', '2019-05-24 05:36:43', 'EcoTower', 'AGBI-FF-01-0016-E', 'Available', NULL, NULL, '2019-05-24');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tblreturn`
+--
+
+CREATE TABLE `tblreturn` (
+  `returnID` int(11) NOT NULL,
+  `userID` int(11) NOT NULL,
+  `productID` int(11) NOT NULL,
+  `reasonForReturn` varchar(800) NOT NULL,
+  `returnDate` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -152,20 +172,6 @@ CREATE TABLE `tbltransfer` (
   `productID` int(11) NOT NULL,
   `transferToDepartment` varchar(800) NOT NULL,
   `transferDate` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tblupdateitems`
---
-
-CREATE TABLE `tblupdateitems` (
-  `updateID` int(11) NOT NULL,
-  `userID` int(11) NOT NULL,
-  `productID` int(11) NOT NULL,
-  `updatedQuantity` int(11) NOT NULL,
-  `dateUpdated` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -211,6 +217,12 @@ ALTER TABLE `tblproducts`
   ADD KEY `productID` (`productID`);
 
 --
+-- Indexes for table `tblreturn`
+--
+ALTER TABLE `tblreturn`
+  ADD PRIMARY KEY (`returnID`);
+
+--
 -- Indexes for table `tblsuppliers`
 --
 ALTER TABLE `tblsuppliers`
@@ -226,15 +238,6 @@ ALTER TABLE `tbltransfer`
   ADD KEY `userID` (`userID`),
   ADD KEY `productID` (`productID`),
   ADD KEY `transferID` (`transferID`);
-
---
--- Indexes for table `tblupdateitems`
---
-ALTER TABLE `tblupdateitems`
-  ADD PRIMARY KEY (`updateID`),
-  ADD KEY `userID` (`userID`),
-  ADD KEY `productID` (`productID`),
-  ADD KEY `updateID` (`updateID`) USING BTREE;
 
 --
 -- Indexes for table `tblusers`
@@ -257,7 +260,13 @@ ALTER TABLE `tbldispatch`
 -- AUTO_INCREMENT for table `tblproducts`
 --
 ALTER TABLE `tblproducts`
-  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=139;
+  MODIFY `productID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+
+--
+-- AUTO_INCREMENT for table `tblreturn`
+--
+ALTER TABLE `tblreturn`
+  MODIFY `returnID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblsuppliers`
@@ -270,12 +279,6 @@ ALTER TABLE `tblsuppliers`
 --
 ALTER TABLE `tbltransfer`
   MODIFY `transferID` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `tblupdateitems`
---
-ALTER TABLE `tblupdateitems`
-  MODIFY `updateID` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `tblusers`
@@ -300,13 +303,6 @@ ALTER TABLE `tbldispatch`
 ALTER TABLE `tbltransfer`
   ADD CONSTRAINT `tblTransfer_ibfk_2` FOREIGN KEY (`productID`) REFERENCES `tblproducts` (`productID`),
   ADD CONSTRAINT `tblTransfer_ibfk_3` FOREIGN KEY (`userID`) REFERENCES `tblusers` (`userID`);
-
---
--- Constraints for table `tblupdateitems`
---
-ALTER TABLE `tblupdateitems`
-  ADD CONSTRAINT `tblUpdateItems_ibfk_1` FOREIGN KEY (`userID`) REFERENCES `tblusers` (`userID`),
-  ADD CONSTRAINT `tblUpdateItems_ibfk_2` FOREIGN KEY (`productID`) REFERENCES `tblproducts` (`productID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
